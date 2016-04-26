@@ -1,0 +1,118 @@
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: $bold;
+	font-size: 1.4rem;
+}
+
+.logo{
+	padding: 15px $padding;
+}
+
+	.logo-img{
+		width: 200px;
+	}
+
+.nav{
+	
+	flex:2;
+	
+	li{
+		display: inline;
+		text-transform: uppercase;
+	}
+	
+	a{
+		display: inline-block;
+		transition: color ease .3s;
+		color: $gris;
+		text-decoration: none;
+		padding: 15px 12px;
+		
+		&:hover{
+			color: $bleu;
+		}
+	}
+	
+	.current_page_item{
+		a{
+			color: $bleu;
+		}
+	}
+}
+
+.header-phone{
+	display: inline-block;
+	transition: color ease .3s;
+	color: $gris;
+	text-decoration: none;
+	padding: 15px $padding/2;
+	position: relative;
+	border-right: 1px solid $grisclair;
+	margin-right: $padding/2;
+	
+	svg{
+		transition: fill ease .3s;
+		width: 25px;
+		height: 25px;
+		fill: $gris;
+		margin-right: 10px;
+		position: absolute;
+		top: 10px;
+		left: -15px;
+	}
+	
+	&:hover{
+		color: $bleu;
+		
+		svg{
+			fill: $bleu;
+		}
+	}
+}
+
+.header form{
+	margin-right: $padding/2;
+}
+
+.header-devis{	
+	background-color: $vert;	
+	color: #fff;
+	display: inline-block;
+	padding: 25px $padding; //Le 25 est au pif, faudrait faire ça mieux
+	text-transform: uppercase;
+	text-decoration: none;
+	
+	span{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	svg{
+		display: inline-block;
+		vertical-align: middle;
+		height: 25px;
+		width: 25px;
+		fill: #fff;
+		margin-left: 5px;
+	}
+}
+
+.wrapper-cart{
+	position: relative;
+}
+
+.count-devis{
+	position: absolute;
+	font-size: 1.2rem;
+	font-weight: $black;
+	background-color: $bleu;
+	border-radius: 100%;
+	padding: 5px;
+	top: -7px;
+	right: -12px;
+	min-height: 23px;
+	min-width: 23px;
+	text-align: center;
+}

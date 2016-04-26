@@ -3,5 +3,17 @@
 @import "reset";
 @import "breakpoints";
 
+$padding: 45px;
+
+$bleu: #0377bf;
+$vert: #a0bf33;
+$gris: #aaa;
+$grisclair: #d7d7d7;
+
+$medium: 500;
+$bold: 700;
+$black: 900;
+
 @import "general_layout";
+@import "header";
 

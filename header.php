@@ -13,38 +13,52 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<?php wp_head(); ?>
-		<script>
-        // conditionizr.com
-        // configure environment tests
-        conditionizr.config({
-            assets: '<?php echo get_template_directory_uri(); ?>',
-            tests: {}
-        });
-        </script>
+		
+		<script src="https://use.typekit.net/vrs8rsa.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 	</head>
 	<body <?php body_class(); ?>>
+	
+	
+		<div class="svg-wrapper" aria-hidden="true">
+			<?php echo file_get_contents(get_template_directory_uri().'/img/svg-prod/sprite/svgs.svg'); ?>
+		</div>
 
-		<!-- wrapper -->
-		<div class="wrapper">
 
-			<!-- header -->
-			<header class="header clear" role="banner">
+		<!-- header -->
+		<header class="header clear" role="banner">
 
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
-					</div>
-					<!-- /logo -->
+				<!-- logo -->
+				<div class="logo">
+					<a href="<?php echo home_url(); ?>">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+					</a>
+				</div>
+				<!-- /logo -->
 
-					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
+				<!-- nav -->
+				<nav class="nav" role="navigation">
+					<?php html5blank_nav(); ?>
+				</nav>
+				<!-- /nav -->
 
-			</header>
-			<!-- /header -->
+				<a class="header-phone" href="tel:+338504222" title="Appeler Sodisgro à Rosheim">
+				<svg><use xlink:href="#icon-phone"/></svg>03 88 50 42 22</a>
+
+				<?php //get_template_part('searchform'); ?>
+				<?php get_product_search_form(); ?>
+
+				<a class="header-devis" href="<?php echo WC()->cart->get_cart_url(); ?>" title="Accéder à mon devis">
+				
+					<span class="titre-devis">Mon devis</span>
+					
+					<span class="wrapper-cart">
+						<svg><use xlink:href="#icon-cart"/></svg>
+						<span class="count-devis"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+					</span>
+				</a>
+			
+
+		</header>
+		<!-- /header -->

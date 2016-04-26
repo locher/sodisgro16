@@ -6,3 +6,55 @@ html{
 	font-size: 62.5%;
 	background-color: #fff;
 }
+
+body{
+	font-size: 1.5rem;
+	font-family: Lato;
+	font-weight: $medium;
+}
+
+.svg-wrapper{
+	display: none;
+}
+
+.woocommerce-product-search{
+	
+	background-color: #ececec;
+	border-radius: 20px;
+	
+	
+	input{
+		border:0;
+		background-color: transparent;
+		padding: 13px 25px;
+		font-family: inherit;
+		font-size: 1.3rem;
+		color: $bleu;
+		
+		&::placeholder{
+			color: $gris;
+		}
+	}
+	
+		// Au focus du input, l'icon search change de couleur
+		input:focus + button svg{
+			fill: $bleu;
+		}
+	
+	button{
+		background-color: transparent;
+		border:0;
+		font-family: inherit;
+		margin-right: 10px;
+	}
+	
+	svg{
+		transition: fill ease .3s;
+		width: 20px;
+		height: 20px;
+		position: relative;
+		top: 5px;
+		fill: $gris;
+	}
+
+}
