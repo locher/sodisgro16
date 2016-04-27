@@ -1,3 +1,5 @@
+// Big header
+
 .big-header{
 	background-color: $bleu;
 	min-height: calc(100vh - 150px);
@@ -45,4 +47,67 @@
 		}
 	}
 	
+}
+
+// Tuto devis
+
+.tuto-devis{
+	padding: $padding*1.5 $padding;
+	text-align: center;
+	
+	h2 + p{
+		font-weight: $bold;
+		color: $grisfonce;
+	}
+	
+	.step-devis{
+		margin-top: 40px;
+		color: $bleu;
+		
+		li{
+			display: inline-block;
+			vertical-align: top;
+			max-width: 300px;
+			width: calc((100% - 40px)/3 - 4px);
+			position: relative;
+			
+			&:not(:last-child){
+				margin-right: 20px;
+			}
+		}
+		
+		li:not(:last-child)::after{
+			content:'';
+			display: block;
+			position: absolute;
+			width: calc(100% + 20px);
+			border-bottom: 9px dotted $bleu;
+			top: 30px; //la moitié du wrap SVG - la moitié de ce height
+			left: calc(50% - 5px);
+			z-index: -1;
+		}
+		
+		.wrapSvg{
+			width: 70px;
+			height: 70px;
+			margin: 0 auto;
+			background-color: $bleu;
+			padding: 17px;
+			border-radius: 100%;
+			display: flex;
+		}
+		
+		svg{
+			margin: auto;
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+			fill: #fff;
+		}
+		
+		p{
+			margin-top: 20px;
+		}
+	}
 }

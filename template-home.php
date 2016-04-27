@@ -24,33 +24,36 @@
 			
 		</section>
 		
-		<section class="tuto-devis">
-			<h2>Devis en ligne</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+		<section class="tuto-devis content">
+		
+			<?php the_field('texte_devis'); ?>
+			
+			<?php if(have_rows('etapes_de_devis')): ?>
 			
 			<ul class="step-devis">
+			
+				<?php while(have_rows('etapes_de_devis') ) : the_row(); ?>
 				<li>
-					<svg><use xlink:href="#icon-cart"/></svg>
-					<p>Ajoutez à votre panier tous les produits dont vous avez besoin.</p>
+					<div class="wrapSvg">
+						<svg><use xlink:href="#icon-<?php the_sub_field('icone'); ?>"/></svg>
+					</div>
+					<?php the_sub_field('texte_explication'); ?>
 				</li>
-				<li>
-					<svg><use xlink:href="#icon-cart"/></svg>
-					<p>Validez votre panier et remplissez vos cordonnées.</p>
-				</li>
-				<li>
-					<svg><use xlink:href="#icon-cart"/></svg>
-					<p>Vous recevez votre devis personnalisé en 1 jour ouvrable !</p>
-				</li>
+				<?php endwhile; ?>
+
 			</ul>
+			
+			<?php endif; ?>
+			
 		</section>
 		
-		<section class="avant-home">
+		<section class="avant-home content">
 			<h2>Développement durable</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
 			<a href="#" class="bt">Découvrez la gamme</a>
 		</section>
 		
-		<section class="about-home">
+		<section class="about-home content">
 			<h2>Qui sommes-nous ?</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
 			
