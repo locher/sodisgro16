@@ -47,10 +47,12 @@
 			
 		</section>
 		
+		<?php //Si y a une photo de fond on l'affiche, sinon non ?>
+		
 		<section class="avant-home content">
-			<h2>Développement durable</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-			<a href="#" class="bt">Découvrez la gamme</a>
+			<div class="wrapper-avant"><?php the_field('texte_mise_en_avant');?></div>			
+			<?php if(get_field('image_de_fond')): $img_avant = get_field('image_de_fond'); ?>
+				<div class="img-avant" style="background-image:url('<?php echo $img_avant['sizes']['background'];?>');"></div>		  <?php endif?>
 		</section>
 		
 		<section class="about-home content">

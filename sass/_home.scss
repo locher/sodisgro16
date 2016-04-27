@@ -111,3 +111,35 @@
 		}
 	}
 }
+
+// Pad mise en avant
+
+.avant-home{
+	background-color: $vert;
+	color: #fff;
+	text-align: center;
+	padding: $padding*1.5 $padding;
+	position: relative;
+	z-index: 1;
+	
+	a{
+		margin-top: 20px;
+		@include bt(#fff, $grisfonce, 1.6rem);
+	}
+	
+	.img-avant{
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		opacity: .1;
+		background-size:cover;
+		z-index: 2;
+	}
+	
+	.wrapper-avant{
+		position: relative;
+		z-index: 3;
+	}
+}
