@@ -4,6 +4,10 @@
 	align-items: center;
 	font-weight: $bold;
 	font-size: 1.4rem;
+	position: fixed;
+	background-color: #fff;
+	width: 100%;
+	z-index: 100;
 }
 
 .logo{

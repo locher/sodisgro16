@@ -17,12 +17,15 @@ body{
 	display: none;
 }
 
+main{
+	padding-top: 75px;
+}
+
 .woocommerce-product-search{
 	
 	background-color: #ececec;
 	border-radius: 20px;
-	
-	
+
 	input{
 		border:0;
 		background-color: transparent;
@@ -36,10 +39,10 @@ body{
 		}
 	}
 	
-		// Au focus du input, l'icon search change de couleur
-		input:focus + button svg{
-			fill: $bleu;
-		}
+	// Au focus du input, l'icon search change de couleur
+	input:focus + button svg{
+		fill: $bleu;
+	}
 	
 	button{
 		background-color: transparent;
@@ -56,5 +59,16 @@ body{
 		top: 5px;
 		fill: $gris;
 	}
+}
 
+@mixin bt($fond, $color, $taille){
+	background-color: $fond;
+	color: $color;
+	font-size: $taille;
+	font-weight: $bold;
+	text-decoration: none;
+	padding: $padding/1.75 $padding*1.5 $padding/1.7;
+	display: inline-block;
+	border-radius: 35px;
+	position: relative;
 }
