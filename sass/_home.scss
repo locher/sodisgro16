@@ -1,0 +1,48 @@
+.big-header{
+	background-color: $bleu;
+	min-height: calc(100vh - 150px);
+	padding: $padding;
+	display: flex;
+	text-align: center;
+	color: #fff;
+	position: relative;
+	
+	.wrapperBigHeader{
+		margin: auto;
+		position: relative;
+		z-index: 3;
+	}
+	
+	h1{
+		font-weight: $black;
+		font-size: 9rem;
+		margin-bottom: 20px;
+	}
+	
+	p{
+		font-weight: $bold;
+		font-size: 3.5rem;
+	}
+	
+	a{
+		@include bt($vert, #fff, 2rem);
+		margin-top: 40px;
+	}
+	
+	.bigHeader-fond{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left:0;
+		top:0;
+		display: flex;
+		opacity: .2;
+		
+		div{
+			height: 100%;
+			width: 100%;
+			background-size: cover;
+		}
+	}
+	
+}
