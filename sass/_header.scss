@@ -76,7 +76,8 @@
 	margin-right: $padding/2;
 }
 
-.header-devis{	
+.header-devis{
+	transition: background-color ease .3s;
 	background-color: $vert;	
 	color: #fff;
 	display: inline-block;
@@ -97,6 +98,14 @@
 		fill: #fff;
 		margin-left: 5px;
 	}
+	
+	&:hover{			
+		background-color: $bleu;
+		
+		.count-devis{
+			background-color: $vert;
+		}
+	}
 }
 
 .wrapper-cart{
@@ -104,6 +113,7 @@
 }
 
 .count-devis{
+	transition: background-color ease .3s;
 	position: absolute;
 	font-size: 1.2rem;
 	font-weight: $black;
