@@ -52,31 +52,35 @@
 		<section class="avant-home content">
 			<div class="wrapper-avant"><?php the_field('texte_mise_en_avant');?></div>			
 			<?php if(get_field('image_de_fond')): $img_avant = get_field('image_de_fond'); ?>
-				<div class="img-avant" style="background-image:url('<?php echo $img_avant['sizes']['background'];?>');"></div>		  <?php endif?>
+				<div aria-hidden="true" class="img-avant" style="background-image:url('<?php echo $img_avant['sizes']['background'];?>');"></div><?php endif?>
 		</section>
 		
 		<section class="about-home content">
-			<h2>Qui sommes-nous ?</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+		
+			<div class="wrap-about">
+				<?php the_field('contenu_qui_sommes_nous');?>
+			</div>			
+			
+			<?php if(have_rows('etapes_qui_sommes_nous')): ?>
 			
 			<ul>
+			
+				<?php while(have_rows('etapes_qui_sommes_nous') ) : the_row(); ?>
+			
 				<li>
-					<h3>Votre grossiste hygiène</h3>
-					<p>Notre gamme de produits couvre tous vos besoins en produits et matériels d’hygiène, brosserie, essuyage…</p>
+					<?php if(get_sub_field('image_etape')): $img_etape = get_sub_field('image_etape'); ?>
+					<div class="about-img" aria-hidden="true" style="background-image: url('<?php echo $img_etape['sizes']['etape'];?>')"></div>
+					<?php endif; ?>
+					<h3><?php the_sub_field('titre_etape');?></h3>
+					<?php the_sub_field('contenu_etape');?>
 				</li>
-				<li>
-					<h3>Votre grossiste hygiène</h3>
-					<p>Notre gamme de produits couvre tous vos besoins en produits et matériels d’hygiène, brosserie, essuyage…</p>
-				</li>
-								<li>
-					<h3>Votre grossiste hygiène</h3>
-					<p>Notre gamme de produits couvre tous vos besoins en produits et matériels d’hygiène, brosserie, essuyage…</p>
-				</li>
-								<li>
-					<h3>Votre grossiste hygiène</h3>
-					<p>Notre gamme de produits couvre tous vos besoins en produits et matériels d’hygiène, brosserie, essuyage…</p>
-				</li>
+				
+				<?php endwhile;?>
+
 			</ul>
+			
+			<?php endif;?>
+			
 		</section>
 
 	</main>

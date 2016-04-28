@@ -30,6 +30,7 @@ if (function_exists('add_theme_support'))
 	
 	add_image_size('bigHeaderimg', 700, '', true); // Pour les images de fond du big header
 	add_image_size('background', 2000, '', true); // Fond 100%
+	add_image_size('etape', 300, '', true); // Fond 100%
 	
     add_image_size('large', 700, '', true); // Large Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail

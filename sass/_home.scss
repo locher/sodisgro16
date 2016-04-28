@@ -2,7 +2,7 @@
 
 .big-header{
 	background-color: $bleu;
-	min-height: calc(100vh - 150px);
+	min-height: calc(100vh - 200px);
 	padding: $padding;
 	display: flex;
 	text-align: center;
@@ -44,6 +44,7 @@
 			height: 100%;
 			width: 100%;
 			background-size: cover;
+			background-position: center;
 		}
 	}
 	
@@ -122,6 +123,10 @@
 	position: relative;
 	z-index: 1;
 	
+	h2 + p{
+		font-weight: $bold;
+	}
+	
 	a{
 		margin-top: 20px;
 		@include bt(#fff, $grisfonce, 1.6rem);
@@ -141,5 +146,43 @@
 	.wrapper-avant{
 		position: relative;
 		z-index: 3;
+	}
+}
+
+// About Sodisgro Home
+
+.about-home{
+	//padding: $padding*1.5 $padding;
+	text-align: center;
+	
+	.wrap-about{
+		padding: $padding*1.5 $padding $padding;
+	}
+	
+	h2 + p{
+		font-weight: $bold;
+		color: $grisfonce;
+	}
+	
+	ul{
+		display: flex;
+	}
+	
+	li{
+		padding: $padding;
+		border: 1px solid #ececec;
+		
+		&:not(:last-child){
+			border-right: 0;
+		}
+	}
+	
+	.about-img{
+		height: 200px;
+		width: 200px;
+		margin: 0 auto 30px;
+		border-radius: 100%;
+		background-size: cover;
+		background-position: center;
 	}
 }
