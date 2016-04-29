@@ -31,6 +31,8 @@ if (function_exists('add_theme_support'))
 	add_image_size('bigHeaderimg', 700, '', true); // Pour les images de fond du big header
 	add_image_size('background', 2000, '', true); // Fond 100%
 	add_image_size('etape', 300, '', true); // Fond 100%
+	add_image_size('personne', 150, 150, true); // Fond 100%
+	add_image_size('couverture', 150, '', true); // Couverture des catalogues
 	
     add_image_size('large', 700, '', true); // Large Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
@@ -461,5 +463,14 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
+
+
+// Fonction pour afficher la taille des PDF
+
+function getSize($file){
+$bytes = filesize($file);
+$s = array('o', 'Ko', 'Mo', 'Go');
+$e = floor(log($bytes)/log(1024));
+return sprintf('%.1f '.$s[$e], ($bytes/pow(1024, floor($e))));}
 
 ?>

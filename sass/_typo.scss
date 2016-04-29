@@ -3,7 +3,11 @@
 	p{
 		max-width: 800px;
 		line-height: 1.35em;
-		margin: 0 auto;
+		color: #767676;
+	}
+	
+	p + p{
+		margin-top: .85em;
 	}
 	
 	h2{

@@ -23,7 +23,7 @@ main{
 
 .woocommerce-product-search{
 	
-	background-color: #ececec;
+	background-color: $grisclair;
 	border-radius: 20px;
 
 	input{
@@ -76,5 +76,31 @@ main{
 	&:hover{
 		padding: 1.3em 3.6em;
 		background-color: darken($fond, 5%);
+	}
+}
+
+section.commun-header{
+	min-height: 40vh;
+	
+	h1{
+		font-size: 6rem;
+	}
+	
+	p{
+		font-size: 1.5rem;
+		line-height: 1.4em;
+	}
+}
+
+.content-wrapper{
+	display: flex;
+	
+	nav{
+		padding: $padding;
+		background-color: $grisclair;
+	}
+	
+	.content{
+		padding: $padding;
 	}
 }

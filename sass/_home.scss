@@ -59,6 +59,7 @@
 	h2 + p{
 		font-weight: $bold;
 		color: $grisfonce;
+		margin: 0 auto;
 	}
 	
 	.step-devis{
@@ -123,6 +124,10 @@
 	position: relative;
 	z-index: 1;
 	
+	p{
+		margin: 0 auto;
+	}
+	
 	h2 + p{
 		font-weight: $bold;
 	}
@@ -162,6 +167,7 @@
 	h2 + p{
 		font-weight: $bold;
 		color: $grisfonce;
+		margin: 0 auto;
 	}
 	
 	ul{
