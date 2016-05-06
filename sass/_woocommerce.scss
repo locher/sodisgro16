@@ -1,0 +1,28 @@
+.cat_grid{
+	//display: flex;
+}
+
+.products{
+	display: flex;
+	flex-wrap: wrap;
+	
+	li{
+		text-align: center;
+	}
+}
+
+.woocommerce ul.products{
+	margin: 0;
+}
+
+.woocommerce ul.products li.product{
+	padding: $padding;
+	width: calc(100% / 4);
+	margin: 0;
+	border-right: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	
+	&:nth-child(){
+		
+	}
+}

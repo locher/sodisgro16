@@ -5,8 +5,8 @@
 
 $padding: 45px;
 
-$bleu: #0377bf;
-$vert: #a0bf33;
+$bleu: #1077b8;
+$vert: #88ba25;
 $gris: #aaa;
 $grisclair: #e5e5e5;
 $grisfonce: #555;
@@ -16,8 +16,12 @@ $bold: 700;
 $black: 900;
 
 @import "general_layout";
+@import "sidebar";
 @import "typo";
 @import "header";
 
 @import "home";
 @import "about";
+
+
+@import "woocommerce";

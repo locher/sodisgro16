@@ -1,0 +1,83 @@
+.sidemenu{
+	
+	> ul{
+		
+		position: relative;
+		padding-left: 60px;
+		
+		&::before{
+			transition: all ease .3s;
+			content:'';
+			display: block;
+			width: 30px;
+			height: 2px;
+			background-color: #9c9c9c;
+			box-shadow: 0px -10px 0px 0px #9c9c9c, 0px 10px 0px 0px #9c9c9c;
+			position: absolute;
+			left: 0;
+			top: 10px;
+		}
+		
+		&:hover::before{
+			background-color: $bleu;
+			box-shadow: 0px -12px 0px 0px $bleu, 0px 12px 0px 0px $bleu;
+		}
+	}
+	
+	ul{
+		display: block;
+	}
+	
+	li{
+		display: block;
+	}
+	
+	a{
+		transition: all ease .3s;
+		display: inline-block;
+		color: #555555;
+		text-decoration: none;
+		line-height: 1.3em;
+		font-weight: $bold;
+		position: relative;
+		padding: 2px 5px;
+		
+		&:hover{
+			color: $bleu;
+			padding-left: 5px;
+		}
+		
+	}
+	
+	.current-menu-item > a,
+	.current-menu-ancestor > a{
+		font-style: italic;
+		color: $bleu;
+	}
+	
+	.sub-menu{
+		padding-left: 25px;
+		margin: 3px 0 10px;
+		
+		a{
+			transition: all ease .3s;
+			font-weight: $medium;
+			color: #666;
+			
+			&:hover{
+				color: $bleu;
+				padding-left: 5px;
+			}
+		}
+		
+	}
+	
+	// Recherche
+	
+	.woocommerce-product-search{
+		background-color: #fff;
+		display: inline-block;
+		margin-bottom: 40px;
+	}
+	
+}

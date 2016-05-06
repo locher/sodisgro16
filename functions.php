@@ -445,25 +445,62 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 
 // Woocommerce
 
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-
-add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
-
-function my_theme_wrapper_start() {
-  echo '<section id="main">';
-}
-
-function my_theme_wrapper_end() {
-  echo '</section>';
-}
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
 
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
 
+function woocommerce_nav()
+{
+	wp_nav_menu(
+	array(
+		'theme_location'  => '',
+		'menu'            => 'woocommerce',
+		'container'       => 'div',
+		'container_class' => 'menu-{menu slug}-container',
+		'container_id'    => '',
+		'menu_class'      => 'menu',
+		'menu_id'         => '',
+		'echo'            => true,
+		'fallback_cb'     => 'wp_page_menu',
+		'before'          => '',
+		'after'           => '',
+		'link_before'     => '',
+		'link_after'      => '',
+		'items_wrap'      => '<ul>%3$s</ul>',
+		'depth'           => 0,
+		'walker'          => ''
+		)
+	);
+}
+
+// Virer les styles par défaut
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+//Virer les tris sur la page catégorie
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30, 0);
+
+//Virer le'affichage du résultat sur la page catégorie
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20, 0);
+
+/*
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+add_action('woocommerce_before_main_content', 'my_content_wrapper_start', 10);
+function my_content_wrapper_start() {
+echo '<section id="primary">';
+}
+
+
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+add_action('woocommerce_after_main_content', 'my_content_wrapper_end', 10);
+function my_content_wrapper_end() {
+echo '</section>';
+}
+
+*/
 
 // Fonction pour afficher la taille des PDF
 
