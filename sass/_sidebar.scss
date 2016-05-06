@@ -32,6 +32,10 @@
 		display: block;
 	}
 	
+	li:not(.current-cat-ancestor) .children{
+		display: none;
+	}
+	
 	a{
 		transition: all ease .3s;
 		display: inline-block;
@@ -50,12 +54,13 @@
 	}
 	
 	.current-menu-item > a,
-	.current-menu-ancestor > a{
+	.current-menu-ancestor > a,
+	.current-cat > a{
 		font-style: italic;
-		color: $bleu;
+		color: $bleu !important;
 	}
 	
-	.sub-menu{
+	.children{
 		padding-left: 25px;
 		margin: 3px 0 10px;
 		

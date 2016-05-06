@@ -55,37 +55,20 @@ $template = get_option( 'template' );
 			
 				<?php get_product_search_form(); ?>
 				
-				<ul>
-			<?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC',  'parent' =>0)); //, 'exclude' => '17,77'
-				foreach($wcatTerms as $wcatTerm) : 
-					$wthumbnail_id = get_woocommerce_term_meta( $wcatTerm->term_id, 'thumbnail_id', true );
-				?>
+				<ul class="cat-list">					
 				
-					<li>
-						<a href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy ); ?>"><?php echo $wcatTerm->name; ?></a>
-						<ul class="sub-menu">
-						<?php
-						$wsubargs = array(
-						   'hierarchical' => 1,
-						   'show_option_none' => '',
-						   'hide_empty' => 0,
-						   'parent' => $wcatTerm->term_id,
-						   'taxonomy' => 'product_cat'
+					<?php 
+						$args = array(
+							'taxonomy' => 'product_cat',
+							'title_li' => '',
+							'hide_title_if_empty' => true,
 						);
-						$wsubcats = get_categories($wsubargs);
-						foreach ($wsubcats as $wsc):
-						?>
-							<li><a href="<?php echo get_term_link( $wsc->slug, $wsc->taxonomy );?>"><?php echo $wsc->name;?></a></li>
-						<?php
-						endforeach;
-						?>  
-						</ul>
-					</li>
+					?>
+
+					<?php wp_list_categories($args);?>
 				
-			<?php 
-				endforeach; 
-			?>
-			</ul>
+				</ul>
+			
 			</nav>
 			
 			<div class="cat_grid">
