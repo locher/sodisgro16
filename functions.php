@@ -445,6 +445,7 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 
 // Woocommerce
 
+//Virer le fil d'ariane
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
 
 add_action( 'after_setup_theme', 'woocommerce_support' );
@@ -485,22 +486,33 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 3
 //Virer le'affichage du résultat sur la page catégorie
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20, 0);
 
-/*
+//Ajouter un texte récap dans liste produits
+add_action('woocommerce_after_shop_loop_item_title','woocommerce_template_single_excerpt', 5);
 
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-add_action('woocommerce_before_main_content', 'my_content_wrapper_start', 10);
-function my_content_wrapper_start() {
-echo '<section id="primary">';
+//Ajouter quantité et options dans la liste produitss
+add_action('woocommerce_after_shop_loop_item', 'woocommerce_template_single_add_to_cart', 10, 0);
+
+//Virer le prix des pages
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price');
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price');
+
+//Virer le lien ajouter au panier
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart');
+
+// Hover produit
+function wrapper_hover_product_before()
+{
+    echo '<div class="overlay_product"><div class="ct_overlay"><p class="title_ajoutdevis">Ajouter directement à mon devis</p>';
 }
 
+add_action('woocommerce_after_shop_loop_item', 'wrapper_hover_product_before', 5);
 
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-add_action('woocommerce_after_main_content', 'my_content_wrapper_end', 10);
-function my_content_wrapper_end() {
-echo '</section>';
+function wrapper_hover_product_after()
+{
+    echo('<span>ou</span> <a href="'.get_the_permalink().'" class="link_product" title="'.get_the_title().'">Voir le produit</a></div></div>');
 }
 
-*/
+add_action('woocommerce_after_shop_loop_item', 'wrapper_hover_product_after', 15);
 
 // Fonction pour afficher la taille des PDF
 
