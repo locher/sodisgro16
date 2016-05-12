@@ -1,0 +1,64 @@
+.shop_table{
+	
+	td{
+		border: 1px solid $grisclair;
+		vertical-align: middle;
+		padding: $padding/2;
+	}
+	
+	img{
+		max-width: 100px;
+	}
+	
+	.product-name{
+		a{
+			transition: color ease .3s;
+			color: inherit;
+			text-decoration: none;
+			margin-bottom: .5em;
+			display: inline-block;
+			
+			&:hover{
+				color: $bleu;
+			}
+		}
+	}
+	
+	.product-remove{
+		svg{
+			transition: fill ease .3s;
+			width: 23px;
+			height: 23px;
+			fill: $gris;
+		}
+		
+		a:hover svg{
+			fill: $bleu;
+		}
+	}
+	
+	.variation{
+		dt, dd{
+			display: inline-block;
+			color: $gris;
+			font-size: 1.25rem;
+		}
+	}
+	
+	.quantity{
+		input{
+			font-family: inherit;
+			font-size: 1.4rem;
+			line-height: 1em;
+			display: inline-block;
+			padding: 1em 1em 1em 2em;
+			border-radius: 35px;
+			border: 0;
+			width: 80px;
+			height: 100%;
+			text-align: center;
+			background-color: #eee
+		}
+	}
+	
+}
