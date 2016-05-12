@@ -34,14 +34,26 @@ $template = get_option( 'template' );
 				<?php the_field('contenu_header'); ?>
 			</div>
 			
-			<?php if(have_rows('images_de_fond')): ?>
+			<?php if ( is_product_category()): ?>
+			
+			<?php
+			
+			 global $wp_query;
+			
+			    // get the query object
+				$cat = $wp_query->get_queried_object();
+
+				// get the thumbnail id using the queried category term_id
+				$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true ); 
+
+				// get the image URL
+				$image = wp_get_attachment_image_src( $thumbnail_id, 'background' ); 
+			
+			?>
 			
 			<div class="bigHeader-fond" aria-hidden="true">
 			
-				<?php while ( have_rows('images_de_fond') ) : the_row();?>
-					<?php $image = get_sub_field('image_de_fond'); ?>
-					<div style="background-image: url('<?php echo $image['sizes']['bigHeaderimg']; ?>');"></div>
-				<?php endwhile; ?>
+					<div style="background-image: url('<?php echo $image[0]; ?>');"></div>
 				
 			</div>
 			
