@@ -502,17 +502,28 @@ remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_ad
 // Hover produit
 function wrapper_hover_product_before()
 {
-    echo '<div class="overlay_product"><div class="ct_overlay"><p class="title_ajoutdevis">Ajouter directement à mon devis</p>';
+    echo '<div class="overlay_product"><button title="Fermer cette fenêtre" class="close_overlay"><svg><use xlink:href="#icon-close"/></svg></button><div class="ct_overlay"><p class="title_ajoutdevis">Ajouter directement à mon devis</p>';
 }
 
 add_action('woocommerce_after_shop_loop_item', 'wrapper_hover_product_before', 5);
 
 function wrapper_hover_product_after()
 {
-    echo('<span>ou</span> <a href="'.get_the_permalink().'" class="link_product" title="'.get_the_title().'">Voir le produit</a></div></div>');
+    echo('</div></div>');
 }
 
 add_action('woocommerce_after_shop_loop_item', 'wrapper_hover_product_after', 15);
+
+// Les liens sous chaque produit
+
+function link_cat_products()
+{
+	echo('<button class="bt_add_devis">Ajouter à mon devis</button>');
+	echo('<span class="ou">ou</span>');
+	echo('<a href="'.get_the_permalink().'" class="link_product" title="'.get_the_title().'">Voir le détail du produit</a>');
+}
+
+add_action('woocommerce_after_shop_loop_item', 'link_cat_products', 20);
 
 // Fonction pour afficher la taille des PDF
 
