@@ -121,7 +121,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</div>
 				<?php } ?>
 
-				<input type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'woocommerce' ); ?>" />
+				<button type="submit" class="button" name="update_cart"><svg><use xlink:href="#icon-refresh"/></svg><?php esc_attr_e( 'Update Cart', 'woocommerce' ); ?></button>
 
 				<?php do_action( 'woocommerce_cart_actions' ); ?>
 

@@ -68,6 +68,26 @@
 		border:0;
 		cursor: pointer;
 		font-weight: $medium;
+		position: relative;
+		padding-left: 50px;
+		
+		svg{
+			transition: left ease .3s;
+			height: 20px;
+			width: 20px;
+			position: absolute;
+			left: 25px;
+			top: calc(50% - 10px);
+			fill: #666;
+		}
+		
+		&:hover{
+			padding: 1.3em 3.6em 1.3em 70px;
+			
+			svg{
+				left: 45px;
+			}
+		}
 	}
 }
 
