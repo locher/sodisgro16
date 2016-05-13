@@ -525,6 +525,29 @@ function link_cat_products()
 
 add_action('woocommerce_after_shop_loop_item', 'link_cat_products', 20);
 
+/* Remove Checkout Fields et modifs*/
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+function custom_override_checkout_fields( $fields ) {
+unset($fields['billing']['billing_country']);
+unset($fields['billing']['billing_state']);
+unset($fields['billing']['billing_phone']);
+$fields['order']['order_comments']['placeholder'] = '';
+$fields['order']['order_comments']['label'] = 'Message facultatif';
+return $fields;
+}
+
+// Modif contenu du bouton de commande
+
+add_filter( 'woocommerce_order_button_text', 'woo_custom_order_button_text' ); 
+
+function woo_custom_order_button_text() {
+
+    return __( 'Envoyer ma demande de devis', 'woocommerce' ); 
+
+}
+
+
 // Fonction pour afficher la taille des PDF
 
 function getSize($file){

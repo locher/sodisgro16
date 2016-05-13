@@ -26,14 +26,7 @@ $template = get_option( 'template' );
 <main role="main">
 
 		<section class="big-header commun-header">
-			<div class="wrapperBigHeader">
-				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-					<h1><?php woocommerce_page_title(); ?></h1>
-				<?php endif; ?>
-				
-				<?php the_field('contenu_header'); ?>
-			</div>
-			
+		
 			<?php if ( is_product_category()): ?>
 			
 			<?php
@@ -44,20 +37,38 @@ $template = get_option( 'template' );
 				$cat = $wp_query->get_queried_object();
 
 				// get the thumbnail id using the queried category term_id
-				$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true ); 
+				$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
 
 				// get the image URL
-				$image = wp_get_attachment_image_src( $thumbnail_id, 'background' ); 
-			
+				$image = wp_get_attachment_image_src( $thumbnail_id, 'background' ); 			
 			?>
 			
-			<div class="bigHeader-fond" aria-hidden="true">
 			
-					<div style="background-image: url('<?php echo $image[0]; ?>');"></div>
+			<div class="wrapperBigHeader">
+				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+					<h1><?php woocommerce_page_title(); ?></h1>
+				<?php endif; ?>
 				
+				<?php the_field('contenu_header'); ?>
+			</div>
+			
+			<div class="bigHeader-fond" aria-hidden="true">			
+				<div style="background-image: url('<?php echo $image[0]; ?>');"></div>
+			</div>
+			
+			<?php else:?>
+			
+			<div class="wrapperBigHeader">
+				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+					<h1><?php woocommerce_page_title(); ?></h1>
+				<?php endif; ?>
+				
+				<?php the_field('contenu_header'); ?>
 			</div>
 			
 			<?php endif;?>
+			
+			
 			
 		</section>
 		

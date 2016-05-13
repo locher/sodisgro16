@@ -61,4 +61,147 @@
 		}
 	}
 	
+	
+	//le bouton refresh
+	.actions .button{
+		@include bt($grisclair, inherit, 1.1rem);
+		border:0;
+		cursor: pointer;
+		font-weight: $medium;
+	}
+}
+
+.cart_template{
+	
+	display: block;
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	
+	p{
+		max-width: 100%;
+	}
+	
+	.shop_table{
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	.woocommerce{	
+		
+		form{
+			margin-bottom: $padding;
+		}
+		
+		.product-name{
+			text-align: left;
+		}
+	}
+	
+	.woocommerce-billing-fields{
+		margin: 40px 0 0;
+		
+		h3{
+			margin-bottom: 20px;
+		}
+		
+		.input-text{
+			transition: border ease .3s;
+			font-family: inherit;
+			font-size: 1.4rem;
+			line-height: 1.2em;
+			display: inline-block;
+			padding: 1em 25px;
+			border-radius: 35px;
+			border: 1px solid #c6c6c6;
+			background-color: #fff;
+			width: 100%;
+			
+			&:focus{
+				border: 1px solid $bleu;
+			}
+		}
+		
+		.form-row{
+			text-align: left;
+			width: calc(50% - 12px);
+			
+			margin-bottom: 20px;
+			
+			label{
+				display: block;
+				margin-bottom: 5px;
+				margin-left: 25px;
+			}
+		}
+		
+		.required{
+			font-weight: $black;
+			color: $bleu;
+		}
+		
+		#billing_first_name_field,
+		#billing_last_name_field,
+		#billing_address_1_field,
+		#billing_address_2_field,
+		#billing_city_field,
+		#billing_postcode_field,
+		#billing_company_field,
+		#billing_email_field{
+			display: inline-block;
+		}
+		
+		#billing_first_name_field,
+		#billing_address_1_field,
+		#billing_city_field,
+		#billing_company_field{
+			margin-right: 20px;
+		}
+		
+		p + p{
+			margin-top: 0;
+		}
+	
+	}
+	
+	.woocommerce-shipping-fields{
+		#order_comments_field{
+			textarea{
+				width: 100%;
+				transition: border ease .3s;
+				font-family: inherit;
+				font-size: 1.4rem;
+				line-height: 1.2em;
+				display: inline-block;
+				padding: 1em 25px;
+				border-radius: 20px 20px 0;
+				border: 1px solid #c6c6c6;
+				background-color: #fff;
+				resize: vertical;
+				min-height: 100px;
+
+				&:focus{
+					border: 1px solid $bleu;
+				}
+			}
+			label{
+				text-align: left;
+				display: block;
+				margin-bottom: 5px;
+				margin-left: 25px;
+			}
+		}
+	}
+	
+	#order_review_heading{
+		display: none;
+	}
+	
+	//Bouton pour valider la commande
+	#place_order{
+		@include bt($bleu, #fff, 1.4rem);
+		border: 0;
+		cursor: pointer;
+		margin-top: 30px;
+	}
 }

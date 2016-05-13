@@ -21,26 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-		<section class="big-header commun-header">
-			<div class="wrapperBigHeader">
-				<?php the_field('contenu_header'); ?>
-			</div>
-			
-			<?php if(have_rows('images_de_fond')): ?>
-			
-			<div class="bigHeader-fond" aria-hidden="true">
-			
-				<?php while ( have_rows('images_de_fond') ) : the_row();?>
-					<?php $image = get_sub_field('image_de_fond'); ?>
-					<div style="background-image: url('<?php echo $image['sizes']['bigHeaderimg']; ?>');"></div>
-				<?php endwhile; ?>
-				
-			</div>
-			
-			<?php endif;?>
-			
-		</section>
-
 <?php wc_print_notices(); ?>
 
 <?php do_action( 'woocommerce_before_cart' ); ?>
@@ -156,11 +136,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 
 </form>
-
-<div class="cart-collaterals">
-
-	<?php do_action( 'woocommerce_cart_collaterals' ); ?>
-
-</div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
