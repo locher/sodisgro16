@@ -514,7 +514,7 @@ function wrapper_hover_product_after()
 
 add_action('woocommerce_after_shop_loop_item', 'wrapper_hover_product_after', 15);
 
-// Les liens sous chaque produit
+// Les liens sous chaque produit (le overlay)
 
 function link_cat_products()
 {
@@ -546,6 +546,32 @@ function woo_custom_order_button_text() {
     return __( 'Envoyer ma demande de devis', 'woocommerce' ); 
 
 }
+
+// Virer la description de la catégorie
+remove_action( 'woocommerce_archive_description', 'woocommerce_product_archive_description', 10);
+remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10);
+
+
+
+/////// SINGLE PRODUCT //////
+
+// Virer les avis produits
+
+add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
+function wcs_woo_remove_reviews_tab($tabs) {
+ unset($tabs['reviews']);
+ return $tabs;
+}
+
+//Construire la page
+
+add_filter( 'woocommerce_topRproduct', 'woocommerce_template_single_title', 5 );
+add_filter( 'woocommerce_topRproduct', 'woocommerce_template_single_excerpt', 10 );
+add_filter( 'woocommerce_topRproduct', 'woocommerce_template_single_meta', 15 );
+
+add_filter( 'woocommerce_bottomRproduct', 'woocommerce_template_single_add_to_cart', 10 );
+
+
 
 
 // Fonction pour afficher la taille des PDF

@@ -60,7 +60,7 @@ if ( ! $product->is_purchasable() ) {
 	 	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
 	 	
 
-	 	<button type="submit" class="single_add_to_cart_button button alt"><svg><use xlink:href="#icon-cart"/></svg></button>
+	 	<button type="submit" class="single_add_to_cart_button button alt"><svg><use xlink:href="#icon-cart"/> <span>Ajouter à mon devis</span></svg></button>
 	 	
 	 	</div>
 

@@ -16,7 +16,7 @@
 		text-decoration: none;
 		
 		h3{
-			margin-top: 1em;
+			margin-top: 2em;
 			color: #242424;
 			font-size: 1.6rem;
 			line-height: 1.2em;
@@ -163,6 +163,10 @@
 			width: 20px;
 			height: 20px;
 			fill: #fff;
+		}
+		
+		span{
+			display: none;
 		}
 
 	}
