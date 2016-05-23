@@ -45,6 +45,7 @@
 		
 		//Sticky menu
 		//$(".sidemenu").sticky({topSpacing:50});
+
 	});
 	
 })(jQuery, this);

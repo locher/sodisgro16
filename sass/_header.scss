@@ -12,6 +12,7 @@
 
 .logo{
 	padding: 15px $padding;
+	
 }
 
 	.logo-img{
@@ -45,6 +46,30 @@
 			font-weight: $black;
 		}
 	}
+	
+
+}
+
+//Menu responsive
+
+@include width-below(800px){
+
+		
+ 	.nav{
+		border: 1px solid $grisclair;
+		position: absolute;
+		order: 5;
+		top: 73px;
+		left: 0;
+		background: #fff;
+		width: 100vw;
+		text-align: center;
+		padding: 0 $padding;
+		
+		a{
+			padding: 15px 8px;
+		}
+	}
 }
 
 .header-phone{
@@ -74,6 +99,10 @@
 		svg{
 			fill: $bleu;
 		}
+	}
+	
+	@include width-below(1350px){
+		display: none;
 	}
 }
 
@@ -111,7 +140,52 @@
 			background-color: $vert;
 		}
 	}
+	
+	@include width-below(1200px){
+		
+		padding: 25px 45px 25px 35px;
+		
+		.titre-devis{
+			display: none;
+		}
+	}
+	
+	@include width-below(800px){
+		
+		background-color: #fff;
+		padding: 25px $padding 25px 10px;
+		
+		svg{
+			fill: #4a4a4a;
+		}
+		
+		&:hover{
+			background-color: #fff;
+		}
+	}
+	
 }
+
+
+// Search top
+	
+.header .woocommerce-product-search{
+	
+	@include width-below(990px){	
+		display: none;
+	}
+	
+	.search-field{
+		@include width-below(1100px){
+			width: 125px;
+		}
+	}
+
+}
+
+
+// Cart
+
 
 .wrapper-cart{
 	position: relative;
