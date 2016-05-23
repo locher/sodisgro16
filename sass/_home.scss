@@ -173,11 +173,17 @@
 	
 	ul{
 		display: flex;
+		flex-wrap: wrap;
 	}
 	
 	li{
 		padding: $padding;
 		border: 1px solid #ececec;
+		width: 25%;
+		
+		@include width-below(1100px){
+			width: 50%;
+		}
 		
 		&:not(:last-child){
 			border-right: 0;
@@ -191,5 +197,10 @@
 		border-radius: 100%;
 		background-size: cover;
 		background-position: center;
+		
+		@include width-below(1100px){
+			width: 150px;
+			height: 150px;
+		}
 	}
 }
