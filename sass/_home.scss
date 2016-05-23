@@ -9,6 +9,10 @@
 	color: #fff;
 	position: relative;
 	
+	@include width-below(500px){
+		padding: $padding*2 $padding/2 $padding;
+	}
+	
 	.wrapperBigHeader{
 		margin: auto;
 		position: relative;
@@ -19,11 +23,19 @@
 		font-weight: $black;
 		font-size: 9rem;
 		margin-bottom: 20px;
+		
+		@include width-below(500px){
+			font-size: 7rem;
+		}
 	}
 	
 	p{
 		font-weight: $bold;
 		font-size: 3.5rem;
+		
+		@include width-below(500px){
+			font-size: 2.5rem;
+		}
 	}
 	
 	a{
@@ -76,17 +88,25 @@
 			&:not(:last-child){
 				margin-right: 20px;
 			}
+			
+			@include width-below(500px){
+				width: 100%;
+				margin-bottom: 50px;
+			}
 		}
 		
-		li:not(:last-child)::after{
-			content:'';
-			display: block;
-			position: absolute;
-			width: calc(100% + 20px);
-			border-bottom: 9px dotted $bleu;
-			top: 30px; //la moitié du wrap SVG - la moitié de ce height
-			left: calc(50% - 5px);
-			z-index: -1;
+		@include width-above(499px){	
+		
+			li:not(:last-child)::after{
+				content:'';
+				display: block;
+				position: absolute;
+				width: calc(100% + 20px);
+				border-bottom: 9px dotted $bleu;
+				top: 30px; //la moitié du wrap SVG - la moitié de ce height
+				left: calc(50% - 5px);
+				z-index: -1;
+			}
 		}
 		
 		.wrapSvg{
@@ -183,6 +203,10 @@
 		
 		@include width-below(1100px){
 			width: 50%;
+		}
+		
+		@include width-below(500px){
+			width: 100%;
 		}
 		
 		&:not(:last-child){
