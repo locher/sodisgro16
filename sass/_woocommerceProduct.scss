@@ -37,6 +37,11 @@
 			width:25%;
 			padding: $padding/2;
 			border-bottom: 1px solid $grisclair;
+			
+			img{
+				max-height: 75px;
+				width: auto;
+			}
 		}
 		
 		a + a{
