@@ -1,5 +1,7 @@
 .sidemenu{
 	
+	min-width: 350px;
+	
 	> ul{
 		
 		position: relative;
@@ -85,4 +87,16 @@
 		margin-bottom: 40px;
 	}
 	
+	
+	
+}
+
+
+//Sidebar woocommerce responsive
+
+@include width-below(750px){
+	
+	.woocommerce .content-wrapper{
+		flex-direction: column;
+	}
 }

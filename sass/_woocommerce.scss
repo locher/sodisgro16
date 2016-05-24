@@ -213,8 +213,16 @@
 	border-right: 1px solid #e5e5e5;
 	border-bottom: 1px solid #e5e5e5;
 	
-	&:nth-child(){
-		
+	@include width-below(1800px){
+		width: calc(100% / 3);
+	}
+	
+	@include width-below(1400px){
+		width: 50%;
+	}
+	
+	@include width-below(1050px){
+		width: 100%;
 	}
 }
 
