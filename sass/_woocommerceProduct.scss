@@ -10,6 +10,7 @@
 
 .imgs-wrapper{
 	border-right: 1px solid $grisclair;
+	position: relative;
 	
 	.images{
 		width: 600px;
@@ -19,7 +20,7 @@
 	a.woocommerce-main-image{
 		display: block;
 		padding: $padding;
-		border-bottom: 1px solid $grisclair;
+		//border-bottom: 1px solid $grisclair;
 	}
 	
 	.attachment-shop_single{
@@ -32,11 +33,18 @@
 		
 		display: flex;
 		flex-wrap: wrap;
+		position: absolute;
+		bottom: $padding/2;
+		left: $padding/2;
+		right: $padding/2;
+		background-color: #fff;
+		opacity: .8;
+		border: 1px solid $grisclair;
 		
 		a{
 			width:25%;
 			padding: $padding/2;
-			border-bottom: 1px solid $grisclair;
+			//border-bottom: 1px solid $grisclair;
 			
 			img{
 				max-height: 75px;
@@ -46,6 +54,10 @@
 		
 		a + a{
 			border-left: 1px solid $grisclair;
+		}
+		
+		a:nth-child(n+5){
+			display: none;
 		}
 	}
 }
@@ -235,4 +247,5 @@
 
 .rightProduct{
 	display: flex;
+	justify-content: space-between;
 }
