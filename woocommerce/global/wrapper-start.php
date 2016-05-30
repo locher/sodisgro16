@@ -58,12 +58,38 @@ $template = get_option( 'template' );
 			
 			<?php else:?>
 			
+			<?php
+			
+			//Si c'est pas une page catégorie, on récupère l'id du produit pour quand même afficher la catégorie et la photo qui va avec
+
+			global $post;
+			$terms = get_the_terms( $post->ID, 'product_cat' );
+			foreach ($terms as $term) {
+				$product_cat_name = $term->name;
+				$product_cat_id = $term->term_id;
+				break;
+			}
+
+			
+			 global $wp_query;
+			
+				// get the thumbnail id using the queried category term_id
+				$thumbnail_id = get_woocommerce_term_meta( $product_cat_id, 'thumbnail_id', true );
+
+				// get the image URL
+				$image = wp_get_attachment_image_src( $thumbnail_id, 'background' ); 			
+			?>
+			
 			<div class="wrapperBigHeader">
 				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-					<h1><?php woocommerce_page_title(); ?></h1>
+					<h1><?php echo $product_cat_name; ?></h1>
 				<?php endif; ?>
 				
 				<?php the_field('contenu_header'); ?>
+			</div>
+			
+			<div class="bigHeader-fond" aria-hidden="true">			
+				<div style="background-image: url('<?php echo $image[0]; ?>');"></div>
 			</div>
 			
 			<?php endif;?>
