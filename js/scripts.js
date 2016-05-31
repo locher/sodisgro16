@@ -61,7 +61,7 @@
 		
 		if ($('.flickity-slider a').length < 4){
 			$('.flickity-prev-next-button').hide();
-		}		
+		}
 
 	});
 	

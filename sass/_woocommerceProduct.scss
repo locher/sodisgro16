@@ -41,7 +41,6 @@
 			transition: opacity ease .2s;
 			width:25%;
 			padding: $padding/2;
-			//border-bottom: 1px solid $grisclair;
 			background-color: #fff;
 			opacity: .8;
 			
@@ -58,10 +57,7 @@
 		a + a{
 			border-left: 1px solid rgba($grisclair, .8);
 		}
-		
-		a:nth-child(n+5){
-			//display: none;
-		}
+
 	}
 }
 
