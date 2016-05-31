@@ -27,7 +27,10 @@ $template = get_option( 'template' );
 
 		<section class="big-header commun-header">
 		
-			<?php if ( is_product_category()): ?>
+			<?php 
+			//Les pages catégories
+			if ( is_product_category()): ?>
+			
 			
 			<?php
 			
@@ -56,7 +59,9 @@ $template = get_option( 'template' );
 				<div style="background-image: url('<?php echo $image[0]; ?>');"></div>
 			</div>
 			
-			<?php else:?>
+			<?php 
+			// Page produit
+			elseif(is_product()): ?>
 			
 			<?php
 			
@@ -91,6 +96,23 @@ $template = get_option( 'template' );
 			<div class="bigHeader-fond" aria-hidden="true">			
 				<div style="background-image: url('<?php echo $image[0]; ?>');"></div>
 			</div>
+			
+			<?php
+			//La page catégorie générale
+			else:?>
+			
+			<div class="wrapperBigHeader">
+				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+					<h1><?php woocommerce_page_title(); ?></h1>
+				<?php endif; ?>
+				
+				<?php the_field('contenu_header'); ?>
+			</div>
+			
+			<div class="bigHeader-fond" aria-hidden="true">			
+				<div style="background-image: url('');"></div>
+			</div>
+			
 			
 			<?php endif;?>
 			
