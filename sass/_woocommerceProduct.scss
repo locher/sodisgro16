@@ -30,21 +30,24 @@
 	}
 	
 	.thumbnails{
-		
-		display: flex;
-		flex-wrap: wrap;
+
 		position: absolute;
 		bottom: $padding/2;
 		left: $padding/2;
 		right: $padding/2;
-		background-color: #fff;
-		opacity: .8;
-		border: 1px solid $grisclair;
+		border: 1px solid rgba($grisclair, .8);
 		
 		a{
+			transition: opacity ease .2s;
 			width:25%;
 			padding: $padding/2;
 			//border-bottom: 1px solid $grisclair;
+			background-color: #fff;
+			opacity: .8;
+			
+			&:hover{
+				opacity: 1;
+			}
 			
 			img{
 				max-height: 75px;
@@ -53,11 +56,11 @@
 		}
 		
 		a + a{
-			border-left: 1px solid $grisclair;
+			border-left: 1px solid rgba($grisclair, .8);
 		}
 		
 		a:nth-child(n+5){
-			display: none;
+			//display: none;
 		}
 	}
 }

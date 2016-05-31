@@ -107,6 +107,9 @@ function html5blank_header_scripts()
 		
 		wp_register_script('sticky', get_template_directory_uri() . '/js/module/jquery.sticky.js', array('jquery'), '1.0.4');
         wp_enqueue_script('sticky');
+		
+		wp_register_script('flickity', get_template_directory_uri() . '/js/lib/flickity.pkgd.min.js', array('jquery'), '1.2.1');
+        wp_enqueue_script('flickity');
     }
 }
 
