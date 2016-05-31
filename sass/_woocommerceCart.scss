@@ -4,10 +4,19 @@
 		border: 1px solid $grisclair;
 		vertical-align: middle;
 		padding: $padding/2;
+		
+		@include width-below(600px){
+			padding: $padding/3;
+			//display: block;
+		}
 	}
 	
 	img{
 		max-width: 100px;
+		
+		@include width-below(600px){
+			max-width: 100%;
+		}
 	}
 	
 	.product-name{
@@ -17,11 +26,18 @@
 			text-decoration: none;
 			margin-bottom: .5em;
 			display: inline-block;
+			line-height: 1.3em;
 			
 			&:hover{
 				color: $bleu;
 			}
 		}
+	}
+	
+	.product-thumbnail{
+		@include width-below(450px){
+			display: none;
+		}	
 	}
 	
 	.product-remove{
@@ -180,6 +196,13 @@
 		
 		p + p{
 			margin-top: 0;
+		}
+		
+		@include width-below(700px){
+			p{
+				width: 100% !important;
+				margin-right: 0 !important;
+			}
 		}
 	
 	}
