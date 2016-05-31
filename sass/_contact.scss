@@ -1,8 +1,17 @@
 .page-contact{
 	
+	&.content-wrapper{
+		display: block;
+	}
+	
 	section{
 		display: inline-block;
+		vertical-align: top;
 		width: 50%;
+		
+		@include width-below(900px){
+			width: 100%;
+		}
 	}
 	
 	h2{
@@ -128,6 +137,15 @@
 			
 			+ .halfContact{
 				margin-left: 20px;
+			}
+			
+			@include width-below(500px){
+				width: 100%;
+				
+				+ .halfContact{
+					margin-left: 0;
+					margin-top: 20px;
+				}
 			}
 		}
 	}
