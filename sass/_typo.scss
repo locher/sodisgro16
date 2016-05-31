@@ -14,6 +14,10 @@
 		font-size: 3rem;
 		margin-bottom: .5em;
 		font-weight: $black;
+		
+		@include width-below(500px){
+			font-size: 2.5rem;
+		}
 	}
 	
 	h3{

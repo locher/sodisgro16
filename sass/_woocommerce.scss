@@ -238,3 +238,14 @@
 	@include bt($vert, #fff, 1.4rem);
 	border-radius: 5px;
 }
+
+.woocommerce-message{
+	text-align: center;
+	background-color: $grisclair;
+	padding: 25px $padding;
+	border-left: 7px solid $vert;
+	
+	a{
+		color: $bleu;
+	}
+}

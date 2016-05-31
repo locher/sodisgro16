@@ -1,6 +1,10 @@
 .wraProductHaut{
 	display: flex;
 	
+	@include width-below(1200px){
+		flex-direction: column;
+	}
+	
 	.product_meta{
 		margin-top: 1em;
 		color: #767676;
@@ -11,6 +15,10 @@
 .imgs-wrapper{
 	border-right: 1px solid $grisclair;
 	position: relative;
+	
+	@include width-below(1200px){
+		order: 2;
+	}
 	
 	.images{
 		text-align: center;
@@ -154,6 +162,10 @@
 		margin-bottom: .5em;
 		font-weight: 900;
 		line-height: 1.25em;
+		
+		@include width-below(500px){
+			font-size: 3rem;
+		}
 	}
 	
 	&.content p + p{
@@ -177,6 +189,14 @@
 	
 	border-bottom: 1px solid $gris;
 	margin-bottom: 30px;
+	
+	@include width-below(500px){
+		font-size: 1.2rem;
+		
+		a{
+			padding: 20px 10px;
+		}
+	}
 	
 	li{
 		display: inline-block;

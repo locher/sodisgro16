@@ -89,6 +89,10 @@ section.commun-header{
 	
 	h1{
 		font-size: 6rem;
+		
+		@include width-below(500px){
+			font-size: 4rem;
+		}
 	}
 	
 	p{
