@@ -93,7 +93,7 @@
 			}
 		});					
 	};
-	juizScrollTo('a[href^="#"]');
+	juizScrollTo('.sidemenu a[href^="#"]');
 
 	});
 	
