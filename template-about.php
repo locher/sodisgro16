@@ -24,7 +24,7 @@
 			
 		</section>
 		
-		<div class="content-wrapper">
+		<div class="content-wrapper content-about">
 		
 			<nav role="navigation" class="sidemenu">
 				<ul>
@@ -58,8 +58,8 @@
 						<li>
 							<div class="photo">
 								<img src="<?php echo $photo['sizes']['personne']; ?>" alt="Photo de <?php the_sub_field('nom');?> ">
-							</div>
-							<div class="text-membre">
+							</div><!--
+							--><div class="text-membre">
 								<span class="name"><?php the_sub_field('nom');?></span>
 								<span class="role"><?php the_sub_field('poste');?></span>
 								<span class="phone">

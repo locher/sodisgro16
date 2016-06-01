@@ -25,11 +25,23 @@
 	
 	&:nth-child(even){
 		margin-left: $padding;
+		
+		@include width-below(800px){
+			margin-left: 0;
+		}
+	}
+	
+	@include width-below(800px){
+		width: 100%;
 	}
 	
 	.photo, .text-membre{
 		display: inline-block;
 		vertical-align: middle;
+	}
+	
+	.text-membre{
+		width: calc(100% - 170px);
 	}
 	
 	.photo{
@@ -99,8 +111,16 @@
 		width: calc(50% - 50px);
 		margin-bottom: 40px;
 		
+		@include width-below(800px){
+			width: 100%;
+		}
+		
 		&:nth-child(even){
 			margin-left: $padding;
+			
+			@include width-below(800px){
+				margin-left: 0;
+			}
 		}
 	}
 	
@@ -130,5 +150,11 @@
 			margin-top: 5px;
 			opacity: .8;
 		}
+	}
+}
+
+.content-about{
+	@include width-below(1150px){
+		display: block;
 	}
 }
