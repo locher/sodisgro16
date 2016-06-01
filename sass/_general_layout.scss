@@ -32,12 +32,15 @@ main{
 	border-radius: 20px;
 
 	input{
+		-webkit-appearance:none;
 		border:0;
 		background-color: transparent;
 		padding: 13px 25px;
 		font-family: inherit;
 		font-size: 1.3rem;
 		color: $bleu;
+		display: inline-block;
+		width: calc(100% - 50px);
 		
 		&::placeholder{
 			color: $gris;
@@ -54,6 +57,9 @@ main{
 		border:0;
 		font-family: inherit;
 		margin-right: 10px;
+		display: inline-block;
+		margin-left: -4px;
+		width: 40px;
 	}
 	
 	svg{
