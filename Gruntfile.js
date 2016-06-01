@@ -15,11 +15,12 @@ module.exports = function(grunt){
 		sass: {
 			options:{
 				sourceMap: true,
-				outFile: "style.css",
+				outFile: "style.css, ie.css",
 			},
 			dev: {
 				files: {
 					'style.css': 'sass/styles.scss',
+					'ie.css':'sass/ie.scss',
 				},
 				options:{
 					style: 'expanded',

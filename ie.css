@@ -1,0 +1,11 @@
+.header > * {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative; }
+
+.header-phone,
+.header-devis,
+.header form {
+  float: right; }
+
+/*# sourceMappingURL=ie.css.map */

@@ -18,6 +18,10 @@
 		<!--[if lt IE 9]>
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		
+		<!--[if lte IE 10]>
+			 <link href="<?php echo get_template_directory_uri(); ?>/ie.css" rel="stylesheet" media="all">
+		<![endif]-->
 
 		<?php wp_head(); ?>
 		
