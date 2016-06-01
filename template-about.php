@@ -78,7 +78,7 @@
 				</section>
 				
 				<section class="horaires" id="horaires">
-					<?php the_field('titre_horaires');?>
+					<h2><?php the_field('titre_horaires');?></h2>
 					<?php the_field('horaires'); ?>
 				</section>
 				
