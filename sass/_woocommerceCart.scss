@@ -252,3 +252,7 @@
 .page-template-template-cart-php .woocommerce-message{
 	margin-bottom: 30px;
 }
+
+.return-to-shop a{
+	@include bt($bleu, #fff, 1.5rem)
+}
