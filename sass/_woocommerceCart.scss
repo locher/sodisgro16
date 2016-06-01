@@ -135,6 +135,7 @@
 	}
 	
 	.woocommerce-billing-fields{
+		
 		margin: 40px 0 0;
 		
 		h3{
@@ -152,6 +153,7 @@
 			border: 1px solid #c6c6c6;
 			background-color: #fff;
 			width: 100%;
+			-webkit-appearance:none;
 			
 			&:focus{
 				border: 1px solid $bleu;
@@ -222,6 +224,7 @@
 				background-color: #fff;
 				resize: vertical;
 				min-height: 100px;
+				-webkit-appearance:none;
 
 				&:focus{
 					border: 1px solid $bleu;
@@ -246,6 +249,7 @@
 		border: 0;
 		cursor: pointer;
 		margin-top: 30px;
+		-webkit-appearance:none;
 	}
 }
 
