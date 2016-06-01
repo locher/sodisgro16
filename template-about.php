@@ -26,23 +26,26 @@
 		
 		<div class="content-wrapper">
 		
-			<nav role="navigation">
+			<nav role="navigation" class="sidemenu">
 				<ul>
-					<li><a href="#">Présentation</a></li>
-					<li><a href="#">Un truc</a></li>
-					<li><a href="#">Un truc</a></li>
-					<li><a href="#">Un truc</a></li>
+					<li><a href="#presentation"><?php the_field('titre_presentation');?></a></li>
+					<li><a href="#equipe"><?php the_field('titre_equipe');?></a></li>
+					<li><a href="#horaires"><?php the_field('titre_horaires');?></a></li>
+					<li><a href="#catalogues"><?php the_field('titre_catalogues');?></a></li>
 
 				</ul>
 			</nav>
 			
 			<div class="content about">
 			
-				<section class="presentation">
+				<section class="presentation" id="presentation">
+					<h2><?php the_field('titre_presentation');?></h2>
 					<?php the_field('contenu_presentation');?>
 				</section>
 				
-				<section class="equipe">
+				<section class="equipe" id="equipe">
+				
+					<h2><?php the_field('titre_equipe');?></h2>
 					
 					<?php the_field('texte_equipe');?>
 					
@@ -74,11 +77,14 @@
 					</ul>
 				</section>
 				
-				<section class="horaires">
+				<section class="horaires" id="horaires">
+					<?php the_field('titre_horaires');?>
 					<?php the_field('horaires'); ?>
 				</section>
 				
-				<section class="cataloguesPdf">
+				<section class="cataloguesPdf" id="catalogues">
+				
+					<h2><?php the_field('titre_catalogues');?></h2>
 				
 					<?php the_field('texte_catalogue'); ?>
 					
