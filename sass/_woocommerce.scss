@@ -28,6 +28,10 @@
 			margin-top: .8em;
 			margin-bottom: 1.5em;
 			line-height: 1.3em;
+			
+			&:empty{
+				display: none;
+			}
 		}
 	}
 	
@@ -224,6 +228,8 @@
 	@include width-below(1050px){
 		width: 100%;
 	}
+	
+
 }
 
 .single_adq_button_loop{
