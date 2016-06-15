@@ -33,11 +33,7 @@ if (function_exists('add_theme_support'))
 	add_image_size('etape', 300, '', true); // Fond 100%
 	add_image_size('personne', 150, 150, true); // Fond 100%
 	add_image_size('couverture', 150, '', true); // Couverture des catalogues
-	
-    add_image_size('large', 700, '', true); // Large Thumbnail
-    add_image_size('medium', 250, '', true); // Medium Thumbnail
-    add_image_size('small', 120, '', true); // Small Thumbnail
-    add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
@@ -101,12 +97,7 @@ function html5blank_header_scripts()
 
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it
-		
-		wp_register_script('lightbox', get_template_directory_uri() . '/js/lib/lightbox.min.js', array('jquery'), '2.8.2', true);
-        wp_enqueue_script('lightbox');
-		
-		wp_register_script('flickity', get_template_directory_uri() . '/js/lib/flickity.pkgd.min.js', array('jquery'), '1.2.1');
-        wp_enqueue_script('flickity');
+	
 		
 		wp_register_script('myscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('myscripts'); // Enqueue it!
@@ -116,10 +107,18 @@ function html5blank_header_scripts()
 // Load HTML5 Blank conditional scripts
 function html5blank_conditional_scripts()
 {
-    if (is_page('pagenamehere')) {
-        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
-        wp_enqueue_script('scriptname'); // Enqueue it!
+    if (is_product()){
+		wp_register_script('lightbox', get_template_directory_uri() . '/js/lib/lightbox.min.js', array('jquery'), '2.8.2', true);
+        wp_enqueue_script('lightbox');
+		
+		wp_register_script('flickity', get_template_directory_uri() . '/js/lib/flickity.pkgd.min.js', array('jquery'), '1.2.1');
+        wp_enqueue_script('flickity');
     }
+	
+	if(is_product() or is_shop() or is_product_category() or is_page('a-propos')){
+		wp_register_script('waypoints', get_template_directory_uri() . '/js/lib/jquery.waypoints.min.js', array('jquery'), '4.0.0', true);
+        wp_enqueue_script('waypoints');
+	}
 }
 
 // Load HTML5 Blank styles

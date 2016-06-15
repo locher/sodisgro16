@@ -122,25 +122,31 @@ $template = get_option( 'template' );
 		
 		<div class="content-wrapper">
 
-			<nav role="navigation" class="sidemenu">
-			
-				<?php get_product_search_form(); ?>
-				
-				<ul class="cat-list">					
-				
-					<?php 
-						$args = array(
-							'taxonomy' => 'product_cat',
-							'title_li' => '',
-							'hide_title_if_empty' => true,
-						);
-					?>
+				<nav role="navigation" class="sidemenu">
+					
+					<div class="insidemenu">
 
-					<?php wp_list_categories($args);?>
-				
-				</ul>
+						<?php get_product_search_form(); ?>
+
+						<ul class="cat-list">					
+
+							<?php 
+								$args = array(
+									'taxonomy' => 'product_cat',
+									'title_li' => '',
+									'hide_title_if_empty' => true,
+								);
+							?>
+
+							<?php wp_list_categories($args);?>
+
+						</ul>
+					
+					</div>
+
+				</nav>
 			
-			</nav>
+			
 			
 			<div class="cat_grid">
 

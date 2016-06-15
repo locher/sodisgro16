@@ -43,8 +43,23 @@
 			}
 		}
 		
-		//Sticky menu
-		//$(".sidemenu").sticky({topSpacing:50});
+		//Sticky menu	
+
+		var hauteur_menu = $('.header').height();
+
+		var waypoints = $('.sidemenu').waypoint({
+		  handler: function(direction) {
+			console.log(this.element.id + ' hit');
+			$('.sidemenu').toggleClass('sticky-menu');
+		  },
+		offset: hauteur_menu
+		})
+
+
+
+
+
+
 		
 		
 		//Gérer les images sur les pages produits

@@ -86,9 +86,19 @@
 		display: inline-block;
 		margin-bottom: 40px;
 	}
-	
-	
-	
+}
+
+@include width-above(749px){
+	.sticky-menu .insidemenu{
+		position: fixed;
+		top: calc(75px + 45px);
+	}
+}
+
+@include width-below(800px){
+	.sticky-menu .insidemenu{
+		top: calc(75px + 90px);
+	}
 }
 
 
