@@ -255,13 +255,21 @@
 	border-radius: 5px;
 }
 
-.woocommerce-message{
+.woocommerce-message,
+.woocommerce-error{
 	text-align: center;
 	background-color: $grisclair;
 	padding: 25px $padding;
-	border-left: 7px solid $vert;
 	
 	a{
 		color: $bleu;
 	}
+}
+
+.woocommerce-message{
+	border-left: 7px solid $vert;
+}
+
+.woocommerce-error{
+	border-left: 7px solid #a30000;
 }

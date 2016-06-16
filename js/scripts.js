@@ -56,12 +56,6 @@
 		})
 
 
-
-
-
-
-		
-		
 		//Gérer les images sur les pages produits
 		
 		//Flickity
