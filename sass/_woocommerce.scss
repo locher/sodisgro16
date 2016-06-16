@@ -78,6 +78,14 @@
 		opacity: 0;
 		z-index: -10;
 		
+		@include width-below(1800px){
+			padding: $padding/1.5;
+			right: $padding/1.5;
+			bottom: $padding/1.5;
+			left: $padding/1.5;
+			top: $padding/1.5;
+		}
+		
 		&.open{
 			transition: opacity ease .3s, z-index ease 0.3s 0s;
 			opacity: 1;
@@ -219,10 +227,12 @@
 	
 	@include width-below(1800px){
 		width: calc(100% / 3);
+		padding: $padding/1.5;
 	}
 	
-	@include width-below(1400px){
+	@include width-below(1250px){
 		width: 50%;
+		padding: $padding/1.5;
 	}
 	
 	@include width-below(1050px){

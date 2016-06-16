@@ -1,8 +1,9 @@
 .sidemenu{
 	
-	min-width: 350px;
+	min-width: 400px;
 	
-	> ul{
+	> ul,
+	.cat-list{
 		
 		position: relative;
 		padding-left: 60px;
