@@ -280,3 +280,16 @@
 	display: none;	
 }
 
+// La page générale
+
+.post-type-archive-product .cat_grid{
+	h2{
+		padding: $padding;
+		@extend %h2;
+		margin-bottom: 0;
+		
+		+ .woocommerce{
+			border-top: 1px solid $grisclair;
+		}
+	}
+}

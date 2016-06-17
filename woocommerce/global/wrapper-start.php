@@ -102,16 +102,32 @@ $template = get_option( 'template' );
 			else:?>
 			
 			<div class="wrapperBigHeader">
-				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-					<h1><?php woocommerce_page_title(); ?></h1>
-				<?php endif; ?>
-				
+			
+					<?php
+			$args_catalogue = array(
+				'pagename' => 'catalogue'
+			);
+			$catalogue = new WP_Query($args_catalogue);
+		?>
+
+		<?php if($catalogue->have_posts()):?>
+			<?php while($catalogue-> have_posts()) : $catalogue->the_post(); ?>  				
 				<?php the_field('contenu_header'); ?>
 			</div>
 			
 			<div class="bigHeader-fond" aria-hidden="true">			
-				<div style="background-image: url('');"></div>
+				
+				<?php while ( have_rows('images_de_fond') ) : the_row();?>
+					<?php $image = get_sub_field('image_de_fond'); ?>
+					<div style="background-image: url('<?php echo $image['sizes']['bigHeaderimg']; ?>');"></div>
+				<?php endwhile; ?>
 			</div>
+		
+			
+			<?php endwhile;?>
+			
+			
+		<?php endif; ?>
 			
 			
 			<?php endif;?>

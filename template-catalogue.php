@@ -1,6 +1,7 @@
-<?php /* Template Name: Cart Template */ get_header(); ?>
+<?php /* Template Name: Catalogue Template */ get_header(); ?>
 	
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+	
 
 	<main role="main">
 
@@ -24,13 +25,35 @@
 			
 		</section>
 		
-		<div class="content-wrapper">
-			
-			<div class="content cart_template">
-			
-				<?php the_content();?>
+		<div class="content-wrapper content-about">
+		
+			<nav role="navigation" class="sidemenu">
+					
+					<div class="insidemenu">
+
+						<?php get_product_search_form(); ?>
+
+						<ul class="cat-list">					
+
+							<?php 
+								$args = array(
+									'taxonomy' => 'product_cat',
+									'title_li' => '',
+									'hide_title_if_empty' => true,
+								);
+							?>
+
+							<?php wp_list_categories($args);?>
+
+						</ul>
+					
+					</div>
+
+				</nav>
 				
-			</div>
+				<div class="cat_grid"> 
+					<?php the_content();?>
+				</div>
 			
 		</div>
 	
@@ -38,4 +61,9 @@
 	
 	<?php endwhile; endif; ?>
 	
+
+
+			
+			
+
 <?php get_footer(); ?>
