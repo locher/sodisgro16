@@ -534,7 +534,7 @@ add_action('woocommerce_after_shop_loop_item', 'link_cat_products', 20);
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
 function custom_override_checkout_fields( $fields ) {
-unset($fields['billing']['billing_country']);
+//unset($fields['billing']['billing_country']);
 unset($fields['billing']['billing_state']);
 unset($fields['billing']['billing_phone']);
 $fields['order']['order_comments']['placeholder'] = '';
