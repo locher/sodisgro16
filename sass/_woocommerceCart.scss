@@ -1,6 +1,6 @@
 .shop_table{
 	
-	td{
+	td, th{
 		border: 1px solid $grisclair;
 		vertical-align: middle;
 		padding: $padding/2;
@@ -259,4 +259,26 @@
 
 .return-to-shop a{
 	@include bt($bleu, #fff, 1.5rem)
+}
+
+.cart_template{
+	width: 100%;
+}
+
+.woocommerce-thankyou-order-details{
+	margin-bottom: 30px;
+}
+
+.woocommerce-order-received{
+	.shop_table{
+		margin-bottom: 30px;
+	}
+	
+	address{
+		line-height: 1.3em;
+	}
+}
+
+.customer_details{
+	
 }
