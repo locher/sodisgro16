@@ -152,4 +152,32 @@
 			}
 		}
 	}
+	
+	.wpcf7-not-valid-tip,
+	.wpcf7-response-output{
+		text-align: center;
+		background-color: $grisclair;
+		padding: 15px $padding;
+	}
+
+	.wpcf7-response-output{
+		border: 0;
+		border-left: 7px solid #fffc00;
+		margin: 10px 0;
+	}
+
+	.wpcf7-not-valid-tip{
+		border-left: 7px solid #a30000;
+		margin-top: 10px;
+		color: #a30000;
+	}
+	
+	.wpcf7-mail-sent-ok{
+		border-left: 7px solid #50be69;
+	}
+	
+	.wpcf7-not-valid{
+		border: 1px solid #a30000 !important;
+	}
+	
 }
