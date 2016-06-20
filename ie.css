@@ -3,9 +3,11 @@
   vertical-align: middle;
   position: relative; }
 
-.header-phone,
-.header-devis,
-.header form {
-  float: right; }
+.ie .big-header .bigHeader-fond div + div {
+  display: none; }
+
+.ie .about-home ul li {
+  display: table-cell;
+  width: 25%; }
 
 /*# sourceMappingURL=ie.css.map */
