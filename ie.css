@@ -29,4 +29,12 @@
   display: inline-block;
   vertical-align: top; }
 
+.ie .quantity {
+  float: left; }
+
+.ie .imgs-wrapper,
+.ie .rightProduct {
+  display: table-cell;
+  vertical-align: top; }
+
 /*# sourceMappingURL=ie.css.map */
