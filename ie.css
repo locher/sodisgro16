@@ -1,19 +1,32 @@
-.header > * {
+.ie .header > * {
   display: inline-block;
   vertical-align: middle;
   position: relative; }
 
-.header-phone {
+.ie .header-phone {
   display: none !important; }
 
-.header-devis {
+.ie .header-devis {
   float: right; }
 
-.ie .big-header .bigHeader-fond div + div {
+.ie .ie .big-header .bigHeader-fond div + div {
   display: none; }
 
-.ie .about-home ul li {
+.ie .ie .about-home ul li {
   display: table-cell;
   width: 25%; }
+
+.ie .sidemenu {
+  width: 300px;
+  display: table-cell;
+  vertical-align: top; }
+
+.ie .cat_grid {
+  display: table-cell;
+  vertical-align: top; }
+
+.ie .woocommerce ul.products li.product {
+  display: inline-block;
+  vertical-align: top; }
 
 /*# sourceMappingURL=ie.css.map */

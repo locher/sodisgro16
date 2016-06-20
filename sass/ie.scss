@@ -1,29 +1,50 @@
-.header > *{
-	display: inline-block;
-	vertical-align: middle;
-	position: relative;
-}
+.ie{
 
-.header-phone{
-	display: none !important;
-}
+	.header > *{
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+	}
 
-.header-devis{
-	float: right;
-}
+	.header-phone{
+		display: none !important;
+	}
 
-.ie .big-header{
-	
-	.bigHeader-fond{
-		
-		div + div{
-			display: none;
+	.header-devis{
+		float: right;
+	}
+
+	.ie .big-header{
+
+		.bigHeader-fond{
+
+			div + div{
+				display: none;
+			}
 		}
+
+	}
+
+	.ie .about-home ul li{
+		display: table-cell;
+		width: 25%;
 	}
 	
-}
-
-.ie .about-home ul li{
-	display: table-cell;
-	width: 25%;
+	
+	.sidemenu{
+		width: 300px;
+		display: table-cell;
+		vertical-align: top;
+	}
+	
+	.cat_grid{
+		display: table-cell;
+		vertical-align: top;
+	}
+	
+	.woocommerce ul.products li.product{
+		display: inline-block;
+		vertical-align: top;
+	}
+	
 }
