@@ -119,6 +119,16 @@ function html5blank_conditional_scripts()
 		wp_register_script('waypoints', get_template_directory_uri() . '/js/lib/jquery.waypoints.min.js', array('jquery'), '4.0.0', true);
         wp_enqueue_script('waypoints');
 	}
+	
+	if(is_product() or is_shop() or is_product_category()){
+		wp_register_script('scriptWoo', get_template_directory_uri() . '/js/scripts-woo.js', array('jquery'), '1.0.0', true);
+        wp_enqueue_script('scriptWoo');
+	}
+	
+		if(is_product()){
+		wp_register_script('scriptSingleWoo', get_template_directory_uri() . '/js/scripts-productPage.js.js', array('jquery'), '1.0.0', true);
+        wp_enqueue_script('scriptSingleWoo');
+	}
 }
 
 // Load HTML5 Blank styles
