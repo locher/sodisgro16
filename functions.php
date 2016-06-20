@@ -101,6 +101,9 @@ function html5blank_header_scripts()
 		
 		wp_register_script('myscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('myscripts'); // Enqueue it!
+		
+		wp_register_script('uie', get_template_directory_uri() . '/js/ie.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_enqueue_script('uie'); // Enqueue it!
     }
 }
 
@@ -125,7 +128,7 @@ function html5blank_conditional_scripts()
         wp_enqueue_script('scriptWoo');
 	}
 	
-		if(is_product()){
+	if(is_product()){
 		wp_register_script('scriptSingleWoo', get_template_directory_uri() . '/js/scripts-productPage.js.js', array('jquery'), '1.0.0', true);
         wp_enqueue_script('scriptSingleWoo');
 	}
