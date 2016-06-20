@@ -3,6 +3,12 @@
   vertical-align: middle;
   position: relative; }
 
+.header-phone {
+  display: none !important; }
+
+.header-devis {
+  float: right; }
+
 .ie .big-header .bigHeader-fond div + div {
   display: none; }
 
