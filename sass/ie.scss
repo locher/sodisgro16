@@ -14,7 +14,7 @@
 		float: right;
 	}
 
-	.ie .big-header{
+	.big-header{
 
 		.bigHeader-fond{
 
@@ -25,7 +25,7 @@
 
 	}
 
-	.ie .about-home ul li{
+	.about-home ul li{
 		display: table-cell;
 		width: 25%;
 	}
@@ -37,7 +37,8 @@
 		vertical-align: top;
 	}
 	
-	.cat_grid{
+	.cat_grid,
+	.about{
 		display: table-cell;
 		vertical-align: top;
 	}
@@ -55,6 +56,10 @@
 	.rightProduct{
 		display: table-cell;
 		vertical-align: top;
+	}
+	
+	.big-header{
+		overflow: hidden;
 	}
 	
 }

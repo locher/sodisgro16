@@ -9,10 +9,10 @@
 .ie .header-devis {
   float: right; }
 
-.ie .ie .big-header .bigHeader-fond div + div {
+.ie .big-header .bigHeader-fond div + div {
   display: none; }
 
-.ie .ie .about-home ul li {
+.ie .about-home ul li {
   display: table-cell;
   width: 25%; }
 
@@ -21,7 +21,8 @@
   display: table-cell;
   vertical-align: top; }
 
-.ie .cat_grid {
+.ie .cat_grid,
+.ie .about {
   display: table-cell;
   vertical-align: top; }
 
@@ -36,5 +37,8 @@
 .ie .rightProduct {
   display: table-cell;
   vertical-align: top; }
+
+.ie .big-header {
+  overflow: hidden; }
 
 /*# sourceMappingURL=ie.css.map */
