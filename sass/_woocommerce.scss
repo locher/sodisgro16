@@ -256,7 +256,8 @@
 }
 
 .woocommerce-message,
-.woocommerce-error{
+.woocommerce-error,
+.woocommerce-info{
 	text-align: center;
 	background-color: $grisclair;
 	padding: 25px $padding;
@@ -270,7 +271,8 @@
 	border-left: 7px solid $vert;
 }
 
-.woocommerce-error{
+.woocommerce-error,
+.woocommerce-info{
 	border-left: 7px solid #a30000;
 }
 

@@ -97,6 +97,24 @@ $template = get_option( 'template' );
 				<div style="background-image: url('<?php echo $image[0]; ?>');"></div>
 			</div>
 			
+			
+			<?php 
+			// Page search
+			elseif(is_search()): ?>
+			
+			
+			<div class="wrapperBigHeader">
+				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+					<h1><?php woocommerce_page_title(); ?></h1>
+				<?php endif; ?>
+				
+				<?php the_field('contenu_header'); ?>
+			</div>
+			
+			<div class="bigHeader-fond" aria-hidden="true">			
+				<div style="background-image: url('<?php echo $image[0]; ?>');"></div>
+			</div>
+			
 			<?php
 			//La page catégorie générale
 			else:?>
