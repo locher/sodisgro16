@@ -219,6 +219,7 @@
 }
 
 .woocommerce ul.products li.product{
+	list-style: none;
 	padding: $padding;
 	width: calc(100% / 4);
 	margin: 0;

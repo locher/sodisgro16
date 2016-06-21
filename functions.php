@@ -113,7 +113,7 @@ function html5blank_conditional_scripts()
 // Load HTML5 Blank styles
 function html5blank_styles()
 {
-    wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.02', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
 }
 
@@ -519,5 +519,18 @@ function custom_menu_page_removing() {
 
 }
 add_action( 'admin_menu', 'custom_menu_page_removing' );
+
+//Customize WYSIWYG
+
+function my_format_TinyMCE( $in ) {
+	$in['paste_remove_spans'] = true;
+
+    $in['block_formats'] = "Paragraphe=p; Titre 2=h2; Titre 3=h3; Titre 4=h4; Titre 5=h5";
+	$in['toolbar1'] = 'bold,italic,strikethrough,bullist,numlist,link,unlink,spellchecker,wp_fullscreen,wp_adv';
+	$in['toolbar2'] = 'formatselect,pastetext,removeformat,charmap,table,undo,redo,wp_help ';
+	return $in;
+}
+
+add_filter( 'tiny_mce_before_init', 'my_format_TinyMCE' );
 
 ?>

@@ -10,13 +10,14 @@
 
 .content{
 	
-	p{
+	p, li{
 		max-width: 800px;
 		line-height: 1.35em;
 		color: #767676;
 	}
 	
-	p + p{
+	p + p,
+	p + h3{
 		margin-top: .85em;
 	}
 	
@@ -28,5 +29,13 @@
 		font-size: 1.8rem;
 		margin-bottom: .5em;
 		font-weight: $black;
+	}
+	
+	li{
+		list-style: disc;
+	}
+	
+	strong{
+		font-weight: bold;
 	}
 }
