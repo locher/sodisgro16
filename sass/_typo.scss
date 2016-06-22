@@ -17,7 +17,8 @@
 	}
 	
 	p + p,
-	p + h3{
+	p + h3,
+	p + h2{
 		margin-top: .85em;
 	}
 	
@@ -37,5 +38,14 @@
 	
 	strong{
 		font-weight: bold;
+	}
+	
+	a{
+		transition: color ease .2s;
+		color: $bleu;
+		
+		&:hover{
+			color: darken($bleu, 20%);
+		}
 	}
 }
