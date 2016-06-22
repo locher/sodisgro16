@@ -56,15 +56,17 @@
 						<?php $photo = get_sub_field('photo'); ?>
 						
 						<li>
+						
+							<?php if($photo):?>
 							<div class="photo">
 								<img src="<?php echo $photo['sizes']['personne']; ?>" alt="Photo de <?php the_sub_field('nom');?> ">
 							</div><!--
-							--><div class="text-membre">
+							--><?php endif;?><div class="text-membre">
 								<span class="name"><?php the_sub_field('nom');?></span>
 								<span class="role"><?php the_sub_field('poste');?></span>
 								<span class="phone">
 									<svg><use xlink:href="#icon-phone"/></svg>
-									<?php the_sub_field('telephone');?>
+									<a href="tel:+33<?php the_sub_field('telephone');?>"><?php the_sub_field('telephone');?></a>
 								</span>
 								<span class="mail">
 									<svg><use xlink:href="#icon-mail"/></svg>

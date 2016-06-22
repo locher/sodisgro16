@@ -27,6 +27,28 @@
 		
 		<script src="https://use.typekit.net/vrs8rsa.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		
+		<link rel="apple-touch-icon" sizes="57x57" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/apple-touch-icon-57x57.png?v=wAA9d4m0x8">
+		<link rel="apple-touch-icon" sizes="60x60" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/apple-touch-icon-60x60.png?v=wAA9d4m0x8">
+		<link rel="apple-touch-icon" sizes="72x72" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/apple-touch-icon-72x72.png?v=wAA9d4m0x8">
+		<link rel="apple-touch-icon" sizes="76x76" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/apple-touch-icon-76x76.png?v=wAA9d4m0x8">
+		<link rel="apple-touch-icon" sizes="114x114" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/apple-touch-icon-114x114.png?v=wAA9d4m0x8">
+		<link rel="apple-touch-icon" sizes="120x120" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/apple-touch-icon-120x120.png?v=wAA9d4m0x8">
+		<link rel="apple-touch-icon" sizes="144x144" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/apple-touch-icon-144x144.png?v=wAA9d4m0x8">
+		<link rel="apple-touch-icon" sizes="152x152" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/apple-touch-icon-152x152.png?v=wAA9d4m0x8">
+		<link rel="apple-touch-icon" sizes="180x180" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/apple-touch-icon-180x180.png?v=wAA9d4m0x8">
+		<link rel="icon" type="image/png" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/favicon-32x32.png?v=wAA9d4m0x8" sizes="32x32">
+		<link rel="icon" type="image/png" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/favicon-194x194.png?v=wAA9d4m0x8" sizes="194x194">
+		<link rel="icon" type="image/png" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/favicon-96x96.png?v=wAA9d4m0x8" sizes="96x96">
+		<link rel="icon" type="image/png" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/android-chrome-192x192.png?v=wAA9d4m0x8" sizes="192x192">
+		<link rel="icon" type="image/png" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/favicon-16x16.png?v=wAA9d4m0x8" sizes="16x16">
+		<link rel="manifest" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/manifest.json?v=wAA9d4m0x8">
+		<link rel="mask-icon" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/safari-pinned-tab.svg?v=wAA9d4m0x8" color="#0d77b7">
+		<link rel="shortcut icon" href="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/favicon.ico?v=wAA9d4m0x8">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-TileImage" content="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/mstile-144x144.png?v=wAA9d4m0x8">
+		<meta name="msapplication-config" content="http://sodisgro.fr/wp-content/themes/sodisgro16/img/favicon/browserconfig.xml?v=wAA9d4m0x8">
+		<meta name="theme-color" content="#0d77b7">
 
 	</head>
 	<body <?php body_class(); ?>>

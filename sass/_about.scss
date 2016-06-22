@@ -92,9 +92,15 @@
 	margin-right: 5px;
 }
 
-.mail a{
+.mail a,
+.phone a{
+	transition: color ease .2s;
 	font-size: 1.25rem;
 	color: #767676;
+	
+	&:hover{
+		color: $bleu;
+	}
 }
 
 // Les catalogues
