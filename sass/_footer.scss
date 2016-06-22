@@ -1,0 +1,17 @@
+.footer{
+	padding: 25px $padding;
+	text-align: center;
+	color: $grisfonce;
+	font-size: 1.2rem;
+	//border-top: 1px solid $grisclair;
+	background-color: $grisclair;
+	
+	a{
+		transition: color ease .2s;
+		color: $grisfonce;
+		
+		&:hover{
+			color: $bleu;
+		}
+	}
+}

@@ -1,8 +1,10 @@
+</div>
+		
 		<!-- footer -->
 		<footer class="footer" role="contentinfo">
 
 			<!-- copyright -->
-			<p class="copyright"></p>
+			<p>Sodisgro <?php echo date('Y');?> - <a href="<?php echo home_url(); ?>/mentions-legales">Mentions légales</a></p>
 			<!-- /copyright -->
 
 		</footer>
