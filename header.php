@@ -82,6 +82,8 @@
 
 				<?php //get_template_part('searchform'); ?>
 				<?php get_product_search_form(); ?>
+				
+				<?php echo do_shortcode('[woocommerce_product_search]');?>
 
 				<a class="header-devis" href="<?php echo WC()->cart->get_cart_url(); ?>" title="Accéder à mon devis">
 				
