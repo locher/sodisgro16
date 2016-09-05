@@ -33,14 +33,7 @@ if ( $order ) : ?>
 		</p>
 
 	<?php else : ?>
-
-		<ul class="woocommerce-thankyou-order-details order_details">
-			<li class="order">
-				<?php _e( 'Order Number:', 'woocommerce' ); ?>
-				<strong><?php echo $order->get_order_number(); ?></strong>
-			</li>
-
-		</ul>
+	
 		<div class="clear"></div>
 
 	<?php endif; ?>
