@@ -285,14 +285,28 @@
 
 // La page générale
 
-.post-type-archive-product .cat_grid{
+.post-type-archive-product .cat_grid,{
+
+	.product h2{
+		font-size: 2.5rem
+	}
+
 	h2{
-		padding: $padding;
+		padding: $padding/2;
 		@extend %h2;
 		margin-bottom: 0;
+		color: $bleu;
 		
 		+ .woocommerce{
 			border-top: 1px solid $grisclair;
 		}
 	}
+}
+
+.woocommerce-loop-product__title{
+	font-size: 2.5rem;
+	padding: $padding/2;
+		@extend %h2;
+		margin-bottom: 0;
+		color: $bleu;
 }

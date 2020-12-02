@@ -2,6 +2,7 @@
 	font-size: 3rem;
 	margin-bottom: .5em;
 	font-weight: $black;
+	line-height: 1.1em;
 
 	@include width-below(500px){
 		font-size: 2.5rem;

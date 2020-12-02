@@ -27,7 +27,7 @@
 		<div class="content-wrapper page-contact">
 	
 			<section class="cordonnees">
-				<h2>Cordonnées</h2>
+				<h2>Coordonnées</h2>
 				<div class="content">
 					<?php the_field('contenu_cordonnees'); ?>
 				</div>
