@@ -135,11 +135,23 @@
 	}
 	
 	.woocommerce-billing-fields{
-		
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: $padding;
 		margin: 40px 0 0;
-		
+
+		label{
+			display: block;
+			margin-bottom: 10px;
+		}
+	
+
 		h3{
 			margin-bottom: 20px;
+		}
+
+		#billing_country_field{
+			display: none;
 		}
 		
 		.input-text{
@@ -160,40 +172,10 @@
 			}
 		}
 		
-		.form-row{
-			text-align: left;
-			width: calc(50% - 12px);
-			
-			margin-bottom: 20px;
-			
-			label{
-				display: block;
-				margin-bottom: 5px;
-				margin-left: 25px;
-			}
-		}
 		
 		.required{
 			font-weight: $black;
 			color: $bleu;
-		}
-		
-		#billing_first_name_field,
-		#billing_last_name_field,
-		#billing_address_1_field,
-		#billing_address_2_field,
-		#billing_city_field,
-		#billing_postcode_field,
-		#billing_company_field,
-		#billing_email_field{
-			display: inline-block;
-		}
-		
-		#billing_first_name_field,
-		#billing_address_1_field,
-		#billing_city_field,
-		#billing_company_field{
-			margin-right: 20px;
 		}
 		
 		p + p{
@@ -279,6 +261,6 @@
 	}
 }
 
-.customer_details{
-	
+.page-template-template-cart .col-2{
+margin-top: 20px;
 }
