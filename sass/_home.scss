@@ -68,7 +68,7 @@
 	padding: $padding*1.5 $padding;
 	text-align: center;
 	
-	h2 + p{
+	> p{
 		font-weight: $bold;
 		color: $grisfonce;
 		margin: 0 auto;

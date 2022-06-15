@@ -90,27 +90,6 @@
 				
 					<?php the_field('texte_catalogue'); ?>
 					
-					<ul>
-					
-						<?php while(have_rows('catalogue') ) : the_row(); ?>
-						<?php 
-							$couverture = get_sub_field('image_de_couverture');
-							$file = get_sub_field('fichier_pdf');
-						?>
-						
-					
-						<li>
-							<img src="<?php echo $couverture['sizes']['couverture']; ?>" alt="Couverture de <?php the_sub_field('titre_catalogue');?>"><!--
-							--><div class="text-cataloguePdf">
-								<h3><?php the_sub_field('titre_catalogue');?></h3>
-								<p><?php the_sub_field('description_catalogue');?></p>
-								<a href="<?php echo $file['url']; ?>">Télécharger en PDF <span><?php echo getSize( get_attached_file( $file['ID'] ) );?></span></a>
-							</div>
-						</li>
-						
-						<?php endwhile; ?>
-						
-					</ul>
 				</section>
 				
 			</div>
