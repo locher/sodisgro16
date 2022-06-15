@@ -8,6 +8,11 @@
 	text-align: center;
 	color: #fff;
 	position: relative;
+
+
+	p{
+		max-width: 800px;
+	}
 	
 	@include width-below(500px){
 		padding: $padding*2 $padding/2 $padding;
@@ -17,6 +22,12 @@
 		margin: auto;
 		position: relative;
 		z-index: 3;
+
+		&__links{
+			a + a{
+				margin-left: 10px;
+			}
+		}
 	}
 	
 	h1{
@@ -39,7 +50,7 @@
 	}
 	
 	a{
-		@include bt($vert, #fff, 2rem);
+		@include bt($vert, #fff, 1.7rem);
 		margin-top: 40px;
 	}
 	

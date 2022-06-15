@@ -7,6 +7,16 @@
 		<section class="big-header">
 			<div class="wrapperBigHeader">
 				<?php the_field('contenu_header'); ?>
+
+				<?php if(get_field('boutons')):?>
+				<div class="wrapperBigHeader__links">
+					<?php foreach(get_field('boutons') as $link): ?>
+						<a href="<?php echo $link['lien']['url'];?>"><?php echo $link['lien']['title'];?></a>						
+					<?php endforeach;?>
+				
+				</div>
+				<?php endif;?>
+
 			</div>
 			
 			<?php if(have_rows('images_de_fond')): ?>
