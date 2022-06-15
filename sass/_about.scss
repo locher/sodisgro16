@@ -149,11 +149,14 @@
 		@include bt($vert, #fff, 1.3rem);
 	
 		text-align: center;
+
+		&:hover{
+			color: #fff;
+		}
 		
 		span{
 			display: block;
 			font-size: .9em;
-			margin-top: 5px;
 			opacity: .8;
 		}
 	}
