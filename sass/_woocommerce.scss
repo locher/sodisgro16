@@ -338,3 +338,13 @@
 .woocommerce-LoopProduct-link{
 
 }
+
+.archive-img-wrap{
+	aspect-ratio: 1;
+	display: flex;
+	margin-bottom: 20px;
+	
+	img{
+		margin: auto;
+	}
+}

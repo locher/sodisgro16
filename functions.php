@@ -533,3 +533,46 @@ function my_format_TinyMCE( $in ) {
 	$in['toolbar2'] = 'formatselect,pastetext,removeformat,charmap,table,undo,redo,wp_help ';
 	return $in;
 }
+
+// Add tab to woocommerce product
+
+function add_woo_tabs(){
+
+	global $post;
+
+	if(!empty(get_field('titre_de_longlet', $post->ID))){	
+		add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+		function woo_new_product_tab( $tabs ) {		
+			$tabs['test_tab'] = array(
+				'title' 	=> get_field('titre_de_longlet', $post->ID),
+				'priority' 	=> 50,
+				'callback' 	=> 'woo_new_product_tab_content'
+			);
+
+			return $tabs;
+
+		}
+		
+		function woo_new_product_tab_content() {
+
+			// The new tab content
+			echo get_field('contenu_onglet', $post->ID);
+			
+		}
+	}
+}
+
+add_action('wp', 'add_woo_tabs');
+
+// Ajouter un wrapper dans les archives images
+
+// Add the opening div to the img
+function add_img_wrapper_start() {
+    echo '<div class="archive-img-wrap">';
+}
+add_action( 'woocommerce_before_shop_loop_item_title', 'add_img_wrapper_start', 5, 2 );
+// Close the div that we just added
+function add_img_wrapper_close() {
+    echo '</div>';
+}
+add_action( 'woocommerce_before_shop_loop_item_title', 'add_img_wrapper_close', 12, 2 );

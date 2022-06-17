@@ -1,8 +1,9 @@
 .wraProductHaut{
-	display: flex;
+	display: grid;
+	grid-template-columns: 2fr 3fr;
 	
 	@include width-below(1200px){
-		flex-direction: column;
+		grid-template-columns: 1fr;
 	}
 	
 	.product_meta{
@@ -13,8 +14,6 @@
 }
 
 .imgs-wrapper{
-	border-right: 1px solid $grisclair;
-	position: relative;
 	
 	@include width-below(1200px){
 		order: 2;
@@ -23,31 +22,28 @@
 	.images{
 		text-align: center;
 	}
+
+	img{
+		display: block;
+	}
 	
 	a.woocommerce-main-image{
 		display: block;
-		padding: $padding;
 		//border-bottom: 1px solid $grisclair;
 	}
 	
 	.attachment-shop_single{
-		
-		max-height:  600px;
-		max-width:  100%;
+		width: 100%;
 	}
 	
 	.thumbnails{
 
-		position: absolute;
-		bottom: $padding/2;
-		left: $padding/2;
-		right: $padding/2;
-		border: 1px solid rgba($grisclair, .8);
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		
 		a{
+			display: block;
 			transition: opacity ease .2s;
-			width:25%;
-			padding: $padding/2;
 			background-color: #fff;
 			opacity: .8;
 			
@@ -56,8 +52,8 @@
 			}
 			
 			img{
-				max-height: 75px;
-				width: auto;
+				width:100%;
+				height: auto;
 			}
 		}
 		

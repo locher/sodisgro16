@@ -143,6 +143,8 @@
 		label{
 			display: block;
 			margin-bottom: 10px;
+			text-align: left;
+			padding-left: 20px;
 		}
 	
 
@@ -263,4 +265,51 @@
 
 .page-template-template-cart .col-2{
 margin-top: 20px;
+}
+
+#additional_wooccm0_field{
+	text-align: left;
+
+	.required{
+		font-weight: $black;
+		color: $bleu;
+	}
+
+	> label{
+		display: block;
+		margin-bottom: 10px;
+		text-align: left;
+		padding-left: 20px;
+	}
+
+	.woocommerce-input-wrapper{
+		display: block;
+		margin-bottom: 30px;
+		margin-left: 20px;
+
+		input, label{
+			display: inline-block;
+			margin: 3px 0;
+		}
+
+		label:not(:last-child){
+			margin-right: 20px;
+		}
+
+		br{
+			display: none;
+		}
+
+		input{
+			margin-right: 5px;
+		}
+
+		.description{
+			opacity: .7;
+			margin-top: 5px;
+			font-size: .8em;
+			display:block;
+		}
+
+	}
 }
