@@ -36,7 +36,8 @@
 	}
 	
 	img{
-		max-height: 300px;
+		max-height: 100%;
+		width: auto;
 	}
 	
 	.bt_add_devis{
@@ -315,7 +316,7 @@
 
 .products .woocommerce-product-details__short-description{
 
-	--fadeSize: 30px;
+	--fadeSize: 50px;
 
 	max-height: calc(40px + var(--fadeSize));
 	overflow: hidden;
@@ -327,7 +328,7 @@
 		content:'';
 		display: block;
 		background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);;
-		height: calc(var(--fadeSize) * 1.3);
+		height: var(--fadeSize);
 		width: 100%;
 		position: absolute;
 		bottom: 0;

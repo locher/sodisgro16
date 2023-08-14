@@ -60,31 +60,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php
 							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
-							if ( ! $_product->is_visible() ) {
-								echo $thumbnail;
+							if ( ! $product_permalink ) {
+								echo $thumbnail; // PHPCS: XSS ok.
 							} else {
-								printf( '<a href="%s">%s</a>', esc_url( $_product->get_permalink( $cart_item ) ), $thumbnail );
+								printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
 							}
-						?>
+							?>
+				
 					</td>
 
-					<td class="product-name" data-title="<?php _e( 'Product', 'woocommerce' ); ?>">
+					<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
 						<?php
-							if ( ! $_product->is_visible() ) {
-								echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;';
-							} else {
-								echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $_product->get_permalink( $cart_item ) ), $_product->get_title() ), $cart_item, $cart_item_key );
-							}
+						if ( ! $product_permalink ) {
+							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
+						} else {
+							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
+						}
 
-							// Meta data
-							echo WC()->cart->get_item_data( $cart_item );
+						do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
 
-							// Backorder notification
-							if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
-								echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>';
-							}
+						// Meta data.
+						echo wc_get_formatted_cart_item_data( $cart_item ); // PHPCS: XSS ok.
+
+						// Backorder notification.
+						if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
+							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>', $product_id ) );
+						}
 						?>
-					</td>
+						</td>
 
 					<td class="product-quantity" data-title="<?php _e( 'Quantity', 'woocommerce' ); ?>">
 						<?php

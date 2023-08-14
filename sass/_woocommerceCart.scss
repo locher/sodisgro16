@@ -13,6 +13,8 @@
 	
 	img{
 		max-width: 100px;
+		max-height: 150px;
+		width: auto;
 		
 		@include width-below(600px){
 			max-width: 100%;
@@ -312,4 +314,8 @@ margin-top: 20px;
 		}
 
 	}
+}
+
+.wc_payment_methods{
+	display: none;
 }

@@ -5,7 +5,7 @@
         'use strict';
 
         // Menu produit
-        $('.cat-list > li > a').click(function (event) {
+        $('.cat-list > li > a').hover(function (event) {
             
             if($(this).parent().has('.children')){
                 event.preventDefault();

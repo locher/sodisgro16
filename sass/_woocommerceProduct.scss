@@ -244,18 +244,19 @@
 
 
 
-.related{
-	h2{
-		font-size: 3rem;
-		margin-bottom: .5em;
-		font-weight: 900;
-		padding-left: $padding;
-		margin: 40px 0 25px;
-	}
-	
+.related{	
 	ul.products li.product{
 		border-top: 1px solid $grisclair;
 	}
+}
+
+.related h2,
+.upsells h2{
+	font-size: 3rem;
+	margin-bottom: .5em;
+	font-weight: 900;
+	padding-left: $padding;
+	margin: 40px 0 25px;
 }
 
 .shop_attributes{
@@ -278,4 +279,8 @@
 	margin-top: 30px;
 	margin-bottom: 30px;
 	color: #fff;
+}
+
+.woocommerce-variation.single_variation{
+	display: none !important;
 }
